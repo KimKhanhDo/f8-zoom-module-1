@@ -1,0 +1,67 @@
+@use '../base/utilities' as *;
+@use '../base/responsive' as *;
+
+.btn {
+    display: inline-block;
+    min-width: 180px;
+    padding: 0 35px;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--white-color);
+    background: var(--primary-color);
+    user-select: none;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.hero__btn {
+    margin-top: 38px;
+
+    @include responsive-lg {
+        min-width: 150px;
+        font-size: 1.6rem;
+    }
+
+    @include responsive-sm {
+        line-height: 56px;
+    }
+
+    @include responsive-xs {
+        margin-top: 15px;
+        min-width: 142px;
+        padding: 0 20px;
+        line-height: 46px;
+        font-size: 1.1rem;
+    }
+}
+
+.about__btn {
+    margin-top: 38px;
+    align-self: flex-start;
+    min-width: 166px;
+
+    @include responsive-lg {
+        font-size: 1.6rem;
+    }
+
+    @include responsive-md {
+        margin-top: 40px;
+    }
+
+    @include responsive-xs {
+        margin-top: 30px;
+        min-width: 116px;
+        line-height: 42px;
+        padding: 0 24px;
+        font-size: 1.2rem;
+    }
+}

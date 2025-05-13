@@ -11,7 +11,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--body-font);
 }
 
 button,
@@ -25,6 +25,7 @@ select {
 button {
     outline: none;
     border: none;
+    color: inherit;
     background: transparent;
     cursor: pointer;
 }
@@ -33,7 +34,24 @@ a {
     color: inherit;
 }
 
-h1 {
-    font-family: 'Roboto Slab';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
     font-weight: 700;
+}
+
+.label {
+    font-size: 1.8rem;
+    font-family: var(--heading-font);
+    line-height: 1.66;
+}
+
+.section-heading {
+    margin-top: 6px;
+    font-size: 4.2rem;
+    line-height: 1.23;
 }

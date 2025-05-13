@@ -1,10 +1,12 @@
-@use './reset';
-
 // Base
+@use './base/reset';
 @use './base/base';
+@use './base/grid';
+@use './base/variables';
+@use './base/utilities';
+@use './base/responsive';
 
 // Layout
-@use './layout/grid';
 @use './layout/header';
 @use './layout/footer';
 
@@ -13,5 +15,6 @@
 @use './pages/about';
 
 // Components
+@use './components/logo';
 @use './components/buttons';
 @use './components/artical-item';
