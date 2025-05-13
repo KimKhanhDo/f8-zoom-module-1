@@ -31,8 +31,13 @@
         font-size: 1.6rem;
     }
 
+    @include responsive-md {
+        font-size: 1.8rem;
+    }
+
     @include responsive-sm {
         line-height: 56px;
+        font-size: 1.6rem;
     }
 
     @include responsive-xs {
@@ -44,6 +49,7 @@
     }
 }
 
+// About
 .about__btn {
     margin-top: 38px;
     align-self: flex-start;
@@ -55,6 +61,11 @@
 
     @include responsive-md {
         margin-top: 40px;
+        font-size: 1.8rem;
+    }
+
+    @include responsive-sm {
+        font-size: 1.6rem;
     }
 
     @include responsive-xs {
@@ -63,5 +74,72 @@
         line-height: 42px;
         padding: 0 24px;
         font-size: 1.2rem;
+    }
+}
+
+// Service
+.services__btn {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    min-width: 330px;
+    font-size: 2.2rem;
+    line-height: 72px;
+    color: var(--black-color);
+    background: var(--white-color);
+    transition: color 0.2s linear, background 0.2s linear;
+
+    @include responsive-lg {
+        font-size: 1.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 60px;
+    }
+
+    @include responsive-md {
+        min-width: 280px;
+        font-size: 1.8rem;
+    }
+
+    @include responsive-sm {
+        min-width: 400px;
+        font-size: 1.6rem;
+    }
+
+    @include responsive-xs {
+        min-width: 298px;
+        font-size: 1.9rem;
+        line-height: 65px;
+    }
+
+    &:hover {
+        color: var(--white-color);
+        background: var(--primary-color);
+    }
+
+    &-active {
+        color: var(--white-color);
+        background: var(--primary-color);
+    }
+}
+
+.services__btn-view-all {
+    @include responsive-lg {
+        font-size: 1.6rem;
+    }
+
+    @include responsive-md {
+        font-size: 1.8rem;
+    }
+
+    @include responsive-sm {
+        font-size: 1.6rem;
+    }
+
+    @include responsive-xs {
+        padding: 0 30px;
+        min-width: 136px;
+        font-size: 1.8rem;
     }
 }

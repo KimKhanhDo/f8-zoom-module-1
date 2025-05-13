@@ -159,6 +159,10 @@
         font-size: 1.8rem;
     }
 
+    @include responsive-xs {
+        font-size: 1.6rem;
+    }
+
     &-active {
         font-weight: 600;
         color: var(--primary-color);
@@ -207,6 +211,12 @@
                 right: -20px;
                 width: 12px;
                 height: 8px;
+            }
+
+            @include responsive-xs {
+                right: -18px;
+                width: 10px;
+                height: 6px;
             }
         }
     }
