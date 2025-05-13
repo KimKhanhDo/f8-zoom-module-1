@@ -1,0 +1,39 @@
+// Common
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+}
