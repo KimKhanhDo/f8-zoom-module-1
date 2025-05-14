@@ -9,10 +9,13 @@
 // Layout
 @use './layout/header';
 @use './layout/footer';
+@use './layout/services';
 
 // Pages
 @use './pages/home';
 @use './pages/about';
+@use './layout/cta';
+@use './layout/banner';
 
 // Components
 @use './components/logo';
@@ -20,3 +23,4 @@
 @use './components/article-card';
 @use './components/faq-card';
 @use './components/blog-item';
+@use './components/submenu';

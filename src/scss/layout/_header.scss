@@ -130,7 +130,7 @@
 
     &__list {
         display: flex;
-        gap: 10px;
+        gap: 20px;
 
         @include responsive-md {
             @include flex-column-center;
@@ -145,6 +145,7 @@
 }
 
 .navbar__item {
+    position: relative;
     padding: 15px;
     line-height: 1.75;
     cursor: pointer;
@@ -186,6 +187,11 @@
 
         .navbar__link::after {
             background-image: url('/assets/icons/arrow-up-orange.svg');
+        }
+
+        .submenu {
+            opacity: 1;
+            visibility: visible;
         }
     }
 

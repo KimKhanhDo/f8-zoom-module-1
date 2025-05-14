@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Law Firm</title>
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="/assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/assets/favicon/favicon.svg"
+        />
+        <link
+            rel="shortcut icon"
+            href="/assets/favicon/favicon.ico"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="manifest"
+            href="/assets/favicon/site.webmanifest"
+        />
+
+        <!-- Font -->
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/manrope/stylesheet.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/roboto-slab/stylesheet.css"
+        />
+
+        <!-- Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <!-- Banner -->
+            <section class="banner">
+                <div class="container">
+                    <div class="banner__inner">
+                        <span class="label banner__label">#Practice Areas</span>
+                        <h1 class="banner__heading">
+                            Our Practice Areas to Serve You
+                        </h1>
+                        <p class="banner__desc">
+                            Where every injury is personal. We are a different
+                            kind of law firm. Let our small, passionate group of
+                            trial lawyers fight for your rights!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section class="services">
+                <div class="container">
+                    <div class="services__info">
+                        <span class="label services__label">#Services</span>
+                        <h2 class="section-heading services__heading">
+                            Our Practice Areas
+                        </h2>
+                        <p class="services__desc">
+                            Our Law Office provides a professional experience
+                            for all our clients, helping them navigate their
+                            legal rights.
+                        </p>
+                    </div>
+
+                    <div class="row row-cols-3 row-cols-lg-2 row-cols-sm-1">
+                        <div class="col">
+                            <div class="services__block">
+                                <a
+                                    href="#!"
+                                    class="services__thumb"
+                                >
+                                    <img
+                                        src="/assets/img/img-services-01.jpg"
+                                        alt="Service Image"
+                                    />
+                                </a>
+                                <a
+                                    href="#!"
+                                    class="btn services__btn services__btn-active"
+                                    >Personal Injury Law</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="services__block">
+                                <a
+                                    href="#!"
+                                    class="services__thumb"
+                                >
+                                    <img
+                                        src="/assets/img/img-services-02.jpg"
+                                        alt="Service Image"
+                                    />
+                                </a>
+                                <a
+                                    href="#!"
+                                    class="btn services__btn"
+                                    >Employment Law</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="services__block">
+                                <a
+                                    href="#!"
+                                    class="services__thumb"
+                                >
+                                    <img
+                                        src="/assets/img/img-services-03.jpg"
+                                        alt="Service Image"
+                                    />
+                                </a>
+                                <a
+                                    href="#!"
+                                    class="btn services__btn"
+                                    >Immigration Law</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="services__block">
+                                <a
+                                    href="#!"
+                                    class="services__thumb"
+                                >
+                                    <img
+                                        src="/assets/img/img-services-04.jpg"
+                                        alt="Service Image"
+                                    />
+                                </a>
+                                <a
+                                    href="#!"
+                                    class="btn services__btn"
+                                    >Family Law</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="services__block">
+                                <a
+                                    href="#!"
+                                    class="services__thumb"
+                                >
+                                    <img
+                                        src="/assets/img/img-services-05.jpg"
+                                        alt="Service Image"
+                                    />
+                                </a>
+                                <a
+                                    href="#!"
+                                    class="btn services__btn"
+                                    >Divorce Law</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="services__block">
+                                <a
+                                    href="#!"
+                                    class="services__thumb"
+                                >
+                                    <img
+                                        src="/assets/img/img-services-06.jpg"
+                                        alt="Service Image"
+                                    />
+                                </a>
+                                <a
+                                    href="#!"
+                                    class="btn services__btn"
+                                    >Property Law</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta">
+                <div class="container">
+                    <div class="cta__inner">
+                        <span class="label cta__label">#CTA</span>
+                        <h2 class="section-heading cta__heading">
+                            Dealing With a Issue?
+                        </h2>
+                        <p class="cta__desc">
+                            Where every injury is personal. We are a different
+                            kind of law firm. Let our small, passionate group of
+                            trial lawyers fight for your rights!
+                        </p>
+                        <a
+                            class="btn btn__cta"
+                            href="#!"
+                            >Get a Consultations</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include("./partials/footer.ejs") %>
+
+        <!-- Style -->
+        <script
+            type="module"
+            src="./main.js"
+        ></script>
+    </body>
+</html>

@@ -13,6 +13,7 @@ export default defineConfig({
             input: {
                 index: path.resolve(__dirname, 'src/index.html'),
                 about: path.resolve(__dirname, 'src/about.html'),
+                practiceArea: path.resolve(__dirname, 'src/practice-area.html'),
                 //...
             },
         },
