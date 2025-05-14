@@ -788,7 +788,7 @@
         }
 
         @include responsive-xs {
-            padding: 50px 20px;
+            padding: 50px 52px;
         }
     }
 
@@ -807,6 +807,10 @@
     }
 
     &__heading {
+        @include responsive-md {
+            font-size: 4rem;
+        }
+
         @include responsive-sm {
             font-size: 3.8rem;
         }
@@ -906,6 +910,188 @@
                     width: 200px;
                 }
             }
+        }
+    }
+}
+
+// Testimonial
+.testimonial {
+    margin-top: 150px;
+
+    @include responsive-lg {
+        margin-top: 100px;
+    }
+
+    @include responsive-sm {
+        margin-top: 80px;
+    }
+
+    @include responsive-xs {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: self-end;
+    }
+
+    &__label {
+        color: var(--grey-color);
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.78;
+        }
+    }
+
+    &__heading {
+        max-width: 469px;
+
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.8rem;
+        }
+
+        @include responsive-xs {
+            width: 335px;
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__right {
+        display: flex;
+        gap: 20px;
+
+        @include responsive-md {
+            display: none;
+        }
+    }
+
+    &__client {
+        margin-top: 70px;
+
+        @include responsive-md {
+            margin-top: 50px;
+        }
+
+        @include responsive-sm {
+            margin-top: 30px;
+        }
+
+        @include responsive-xs {
+            margin-top: 40px;
+        }
+
+        .col {
+            @include responsive-md {
+                margin-top: 30px;
+            }
+
+            @include responsive-xs {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__dots {
+        margin-top: 55px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--black-color);
+
+        &-active {
+            background: var(--primary-color);
+        }
+    }
+}
+
+// FAQ
+.faq {
+    margin-top: 150px;
+
+    @include responsive-lg {
+        margin-top: 100px;
+    }
+
+    @include responsive-xs {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label {
+        margin-top: 6px;
+        color: var(--grey-color);
+
+        @include responsive-xs {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    &__heading {
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.8rem;
+        }
+
+        @include responsive-xs {
+            font-size: 2.4rem;
+            line-height: 1.27;
+        }
+    }
+
+    &__filters {
+        margin-top: 18px;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__filter {
+        font-size: 1.8rem;
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        &-active {
+            color: var(--primary-color);
+        }
+    }
+
+    &__list {
+        @include flex-column-center;
+        margin-top: 70px;
+
+        @include responsive-xs {
+            margin-top: 53px;
         }
     }
 }

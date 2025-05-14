@@ -219,3 +219,29 @@
         }
     }
 }
+
+// Testimonial
+.testimonial__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    background: var(--black-color);
+    transition: background 0.2s linear;
+
+    @include responsive-lg {
+        width: 45px;
+        height: 45px;
+    }
+
+    &:hover {
+        background: var(--primary-color);
+        opacity: 0.9;
+    }
+
+    &-right {
+        background: var(--primary-color);
+    }
+}

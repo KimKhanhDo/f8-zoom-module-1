@@ -1,0 +1,137 @@
+@use '../base/utilities' as *;
+@use '../base/responsive' as *;
+
+.faq__card {
+    position: relative;
+    max-width: 770px;
+    padding-bottom: 30px;
+
+    @include responsive-sm {
+        padding-bottom: 25px;
+    }
+
+    @include responsive-xs {
+        padding-bottom: 15px;
+    }
+
+    + .faq__card {
+        margin-top: 30px;
+
+        @include responsive-sm {
+            margin-top: 25px;
+        }
+
+        @include responsive-xs {
+            padding-bottom: 15px;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: var(--light-grey-color);
+        display: block;
+    }
+
+    &:hover {
+        .faq__card-answer {
+            max-height: 500px;
+            opacity: 1;
+            box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
+        }
+
+        .faq__card-btn {
+            background: var(--primary-color);
+        }
+
+        .faq__card-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-question {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45;
+
+        @include responsive-lg {
+            font-size: 2rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+    }
+
+    &-btn {
+        @include flex-display-center;
+        width: 28px;
+        height: 28px;
+        background: var(--black-color);
+        transition: background 0.5s ease;
+
+        @include responsive-sm {
+            width: 25px;
+            height: 25px;
+        }
+
+        @include responsive-xs {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &-icon {
+        width: 6px;
+    }
+
+    &-answer {
+        margin: 18px 0 0px;
+
+        font-size: 1.8rem;
+        line-height: 1.66;
+        color: var(--grey-color);
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 1.3s ease, opacity 1.3s ease;
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        &-inner {
+            padding: 30px;
+
+            @include responsive-xs {
+                padding: 13px;
+            }
+        }
+    }
+
+    &-icon {
+        transition: transform 0.5s ease;
+    }
+}
