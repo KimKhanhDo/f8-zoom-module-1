@@ -63,8 +63,8 @@
 
         .logo {
             @include responsive-md {
-                @include flex-column-center;
-                gap: 6px;
+                // @include flex-column-center;
+                // gap: 6px;
                 margin-top: 15px;
                 padding: 40px 30px;
             }
@@ -314,7 +314,7 @@
         }
 
         @include responsive-xs {
-            margin-top: 76px;
+            margin-top: 85px;
         }
     }
 
@@ -353,9 +353,9 @@
         }
 
         @include responsive-xs {
-            top: -17.2%;
-            left: -4.3%;
-            width: 32.2%;
+            top: -12.9%;
+            left: 0.5%;
+            width: 26.5%;
         }
     }
 
@@ -402,7 +402,7 @@
         }
 
         @include responsive-xs {
-            padding: 5px;
+            padding: 3px;
         }
     }
 

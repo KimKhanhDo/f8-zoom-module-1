@@ -1095,3 +1095,161 @@
         }
     }
 }
+
+// Blog
+.blog {
+    margin: 75px 0;
+    padding: 75px 0;
+
+    @include responsive-sm {
+        margin: 50px 0;
+        padding: 37px 0;
+    }
+
+    @include responsive-xs {
+        margin: 25px 0;
+        padding: 25px 20px;
+    }
+
+    &__label {
+        color: var(--grey-color);
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__heading {
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.8rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 5px;
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include responsive-md {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        max-width: 470px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+        color: var(--grey-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__list {
+        margin-top: 70px;
+
+        @include responsive-md {
+            margin-top: 10px;
+        }
+
+        @include responsive-xs {
+            margin-top: 0;
+        }
+    }
+
+    &__bottom {
+        display: none;
+
+        @include responsive-xs {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn__blog {
+            display: none;
+
+            @include responsive-xs {
+                margin-top: 40px;
+                display: block;
+                width: 158px;
+            }
+        }
+    }
+}
+
+// CTA
+.cta {
+    color: var(--white-color);
+    background: var(--green-color);
+
+    &__inner {
+        @include flex-column-center;
+        padding: 100px 0;
+
+        @include responsive-sm {
+            padding: 80px 0;
+        }
+
+        @include responsive-xs {
+            padding: 40px;
+        }
+    }
+
+    &__label {
+        @include responsive-xs {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    &__heading {
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-xs {
+            font-size: 2.4rem;
+            line-height: 1.25;
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        width: 100%;
+        max-width: 470px;
+
+        font-size: 1.8rem;
+        line-height: 1.66;
+        text-align: center;
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-xs {
+            width: 276px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+}

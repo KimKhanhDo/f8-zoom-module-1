@@ -12,6 +12,13 @@
         @include flex-column-center;
         gap: 4px;
         font-family: var(--heading-font);
+        text-decoration: none;
+
+        // Test
+        .logo {
+            @include flex-column-center;
+            gap: 4px;
+        }
     }
 
     &__icon {

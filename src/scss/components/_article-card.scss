@@ -56,6 +56,10 @@
             margin-top: 20px;
             font-size: 1.6rem;
         }
+
+        @include responsive-md {
+            letter-spacing: 0.1rem;
+        }
     }
 
     &__info {

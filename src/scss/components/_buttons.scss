@@ -245,3 +245,25 @@
         background: var(--primary-color);
     }
 }
+
+// Blog
+.btn__blog {
+    min-width: 158px;
+
+    @include responsive-xs {
+        display: none;
+    }
+}
+
+// CTA
+.btn__cta {
+    margin-top: 38px;
+    min-width: 242px;
+
+    @include responsive-xs {
+        margin-top: 33px;
+        min-width: 142px;
+        line-height: 35px;
+        font-size: 1rem;
+    }
+}
