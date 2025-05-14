@@ -223,6 +223,10 @@
         padding: 0 20px;
     }
 
+    .row {
+        margin-top: -30px;
+    }
+
     &__label {
         @include responsive-xs {
             font-size: 1.2rem;
@@ -230,7 +234,7 @@
     }
 
     &__heading {
-        @include responsive-md {
+        @include responsive-lg {
             font-size: 4rem;
         }
 
@@ -264,7 +268,6 @@
         text-align: center;
 
         @include responsive-lg {
-            margin: 18px 0 30px;
             font-size: 1.6rem;
         }
 
@@ -273,12 +276,13 @@
         }
 
         @include responsive-sm {
-            margin: 12px 0 30px;
+            margin: 12px 0 50px;
             font-size: 1.6rem;
         }
 
         @include responsive-xs {
             margin: 10px 0 40px;
+            padding-bottom: 10px;
             font-size: 1.2rem;
             line-height: 1.75;
         }
@@ -289,7 +293,7 @@
         margin-top: 30px;
 
         @include responsive-xs {
-            margin-top: 0;
+            margin-top: 30px;
         }
 
         &:hover img {
@@ -323,6 +327,585 @@
 
         @include responsive-lg {
             margin-top: 50px;
+        }
+    }
+}
+
+// Features
+.features {
+    margin-top: 150px;
+
+    @include responsive-lg {
+        margin-top: 130px;
+    }
+
+    @include responsive-md {
+        margin-top: 100px;
+    }
+
+    @include responsive-sm {
+        margin-top: 80px;
+    }
+
+    @include responsive-xs {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    &__media {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__img {
+        align-self: flex-end;
+        width: 570px;
+        height: 570px;
+        object-fit: cover;
+
+        @include responsive-xl {
+            width: 500px;
+            height: 500px;
+        }
+
+        @include responsive-md {
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    &__info {
+        margin-left: 130px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include responsive-lg {
+            margin-left: 80px;
+        }
+
+        @include responsive-md {
+            margin-left: 0;
+        }
+    }
+
+    &__label {
+        color: var(--grey-color);
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__heading {
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.8rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 5px;
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+        color: var(--grey-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__list {
+        margin-top: 28px;
+
+        @include responsive-xs {
+            margin-top: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--black-color);
+        }
+
+        + .features__item {
+            margin-top: 12px;
+
+            @include responsive-xs {
+                margin-top: 9px;
+            }
+        }
+    }
+
+    &__group:first-of-type {
+        .row {
+            @include responsive-md {
+                flex-direction: column-reverse;
+                gap: 50px;
+            }
+
+            @include responsive-xs {
+                gap: 30px;
+            }
+        }
+    }
+
+    &__group:last-of-type {
+        margin-top: 150px;
+
+        @include responsive-md {
+            margin-top: 100px;
+        }
+
+        @include responsive-sm {
+            margin-top: 80px;
+        }
+
+        @include responsive-xs {
+            margin-top: 50px;
+        }
+
+        .features__info {
+            margin-left: 0;
+            margin-right: 130px;
+
+            @include responsive-lg {
+                margin-right: 80px;
+            }
+
+            @include responsive-md {
+                margin-right: 0;
+            }
+        }
+
+        .features__media {
+            margin-top: 50px;
+        }
+    }
+}
+
+[class*='features__decor-'] {
+    position: absolute;
+}
+
+.features__decor {
+    &-first {
+        width: 117px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        @include responsive-lg {
+            width: 78px;
+            left: -19%;
+        }
+
+        @include responsive-md {
+            width: 100px;
+            left: 4%;
+        }
+
+        @include responsive-sm {
+            width: 80px;
+        }
+    }
+
+    &-second {
+        width: 20px;
+        top: 0;
+        right: 0;
+
+        @include responsive-sm {
+            width: 15px;
+        }
+    }
+
+    &-third {
+        width: 130px;
+        top: 50%;
+        left: -7px;
+        transform: translateY(-50%);
+
+        @include responsive-lg {
+            width: 100px;
+            left: -22.5%;
+        }
+
+        @include responsive-md {
+            width: 120px;
+            left: 0;
+        }
+    }
+
+    &-fourth {
+        width: 20px;
+        bottom: 0;
+        right: 0;
+
+        @include responsive-sm {
+            width: 15px;
+        }
+    }
+}
+
+// Team
+.team {
+    margin-top: 150px;
+    background: var(--black-color);
+
+    @include responsive-lg {
+        margin-top: 100px;
+    }
+
+    @include responsive-sm {
+        margin-top: 80px;
+    }
+
+    @include responsive-xs {
+        margin-top: 50px;
+    }
+
+    .row {
+        margin-top: -30px;
+
+        @include responsive-lg {
+            margin-top: -50px;
+        }
+
+        @include responsive-xs {
+            margin-top: 0;
+        }
+    }
+
+    .col:first-of-type {
+        .team__btn {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__inner {
+        padding: 100px 0;
+
+        @include responsive-xs {
+            padding: 40px 0 50px;
+        }
+    }
+
+    &__info {
+        @include flex-column-center;
+    }
+
+    &__label {
+        color: var(--primary-color);
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__heading {
+        color: var(--white-color);
+
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.8rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 5px;
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__desc {
+        margin: 18px 0 70px;
+        max-width: 470px;
+
+        font-size: 1.8rem;
+        line-height: 1.66;
+        text-align: center;
+        color: var(--light-green-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 15px;
+            margin-bottom: 40px;
+            width: 335px;
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__block {
+        position: relative;
+        margin-top: 30px;
+
+        @include responsive-lg {
+            margin-top: 50px;
+        }
+
+        &:hover .team__btn {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover img {
+            transform: translateY(-10px);
+        }
+
+        @include responsive-xs {
+            margin-top: 20px;
+        }
+    }
+
+    &__thumb {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+    }
+
+    &__btn-wrap {
+        margin-top: 55px;
+        text-align: center;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 18px;
+        color: var(--white-color);
+        cursor: pointer;
+    }
+
+    &__name {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45;
+
+        @include responsive-md {
+            font-size: 2rem;
+        }
+
+        @include responsive-xs {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__title {
+        line-height: 1.75;
+        color: var(--light-green-color);
+    }
+
+    &__btn-wrap {
+        margin-top: 40px;
+    }
+}
+
+// Awards
+.awards {
+    background: var(--light-yellow-color);
+
+    &__inner {
+        padding: 100px 0;
+
+        @include responsive-md {
+            padding: 80px 0;
+        }
+
+        @include responsive-xs {
+            padding: 50px 20px;
+        }
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__label {
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__heading {
+        @include responsive-sm {
+            font-size: 3.8rem;
+        }
+
+        @include responsive-xs {
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__media {
+        margin-top: 70px;
+
+        @include responsive-md {
+            margin-top: 40px;
+        }
+
+        .col {
+            @include responsive-lg {
+                margin-top: 30px;
+            }
+
+            @include responsive-xs {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 270px;
+        height: 270px;
+        padding: 85px 36px;
+        background: var(--white-color);
+
+        @include responsive-lg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .col {
+        &:first-of-type {
+            .awards__thumb {
+                width: 136px;
+
+                @include responsive-lg {
+                    width: 180px;
+                }
+
+                @include responsive-md {
+                    width: 200px;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            .awards__thumb {
+                width: 198px;
+
+                @include responsive-lg {
+                    width: 251px;
+                }
+
+                @include responsive-md {
+                    width: 270px;
+                }
+            }
+        }
+
+        &:nth-of-type(3) {
+            .awards__thumb {
+                width: 143px;
+
+                @include responsive-lg {
+                    width: 180px;
+                }
+
+                @include responsive-md {
+                    width: 200px;
+                }
+            }
+        }
+
+        &:nth-of-type(4) {
+            .awards__thumb {
+                width: 100px;
+
+                @include responsive-lg {
+                    width: 150px;
+                }
+
+                @include responsive-md {
+                    width: 200px;
+                }
+            }
         }
     }
 }
