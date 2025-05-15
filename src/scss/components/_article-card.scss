@@ -1,116 +1,170 @@
 @use '../base/utilities' as *;
 @use '../base/responsive' as *;
 
-.card {
-    padding: 30px 43px;
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s linear;
+.article {
+    .row {
+        margin-top: 30px;
 
-    @include responsive-lg {
-        padding: 30px 20px;
-    }
-
-    @include responsive-md {
-        padding: 40px 45px;
-    }
-
-    @include responsive-sm {
-        padding: 30px 35px;
-    }
-
-    &:hover {
-        border-color: transparent;
-        box-shadow: 0px 20px 70px 0px rgba(14, 20, 18, 0.07);
-        transform: translateY(-10px);
-    }
-
-    &__avatar {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        object-fit: cover;
-
-        @include responsive-lg {
-            width: 55px;
-            height: 55px;
+        [class*='col'] {
+            margin-top: 30px;
         }
 
         @include responsive-md {
-            width: 70px;
-            height: 70px;
+            [class*='col'] {
+                margin-top: 20px;
+            }
+        }
+
+        @include responsive-sm {
+            [class*='col'] {
+                margin-top: 25px;
+            }
         }
 
         @include responsive-xs {
-            width: 57px;
-            height: 57px;
+            padding: 0 20px;
         }
     }
 
-    &__review {
-        margin-top: 30px;
-        font-size: 1.8rem;
-        line-height: 1.66;
-        color: var(--grey-color);
-
-        @include responsive-lg {
-            margin-top: 20px;
-            font-size: 1.6rem;
-        }
+    .row:first-child {
+        margin-top: -30px;
 
         @include responsive-md {
-            letter-spacing: 0.1rem;
+            margin-top: -20px;
         }
+
+        @include responsive-sm {
+            margin-top: -25px;
+        }
+    }
+
+    &__card {
+        padding: 8px 8px 30px;
+        border-radius: 10px;
+        background: var(--white-color);
+        box-shadow: 3px 6px 60px -20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s linear;
+
+        &:hover {
+            transform: translateY(-12px);
+        }
+    }
+
+    &__img-wrapper {
+        display: block;
+        width: 100%;
+        aspect-ratio: 340 / 293;
+        overflow: hidden;
+
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 
     &__info {
         margin-top: 30px;
+        padding: 0 30px;
+    }
+
+    &__publish-time {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__date {
+        font-size: 1.6rem;
+        line-height: 1.31;
+        font-weight: 500;
+        font-family: var(--inter-font);
+        color: var(--black-color);
 
         @include responsive-lg {
-            margin-top: 20px;
+            font-size: 1.6rem;
         }
 
         @include responsive-md {
-            margin-top: 30px;
+            font-size: 1.8rem;
         }
     }
 
-    &__quote {
-        width: 27px;
-
-        @include responsive-xs {
-            width: 24px;
-        }
-    }
-
-    &__author {
-        margin-top: 12px;
+    &__title {
+        margin-top: 17px;
         font-size: 2rem;
         font-weight: 700;
         line-height: 1.5;
 
+        color: var(--black-color);
+        font-family: var(--manrope-font);
+
         @include responsive-lg {
+            margin-top: 14px;
             font-size: 1.9rem;
         }
 
         @include responsive-md {
-            font-size: 2rem;
+            font-size: 2.1rem;
         }
 
-        @include responsive-xs {
-            font-size: 1.8rem;
-            line-height: 1.5;
+        @include responsive-sm {
+            font-size: 2.2rem;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 
-    &__job {
-        font-size: 1.4rem;
-        line-height: 1.71;
+    &__summary {
+        margin-top: 15px;
+        font-size: 1.6rem;
+        line-height: 1.75;
+        color: var(--grey-color);
+
+        @include responsive-lg {
+            margin-top: 12px;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-top: 19px;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.75;
+        color: var(--primary-color);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__btn-wrapper {
+        margin: 55px 0 150px;
+        text-align: center;
+
+        @include responsive-md {
+            margin: 55px 0 120px;
+        }
+
+        @include responsive-sm {
+            margin: 55px 0 80px;
+        }
 
         @include responsive-xs {
-            font-size: 1.2rem;
-            line-height: 1.75;
+            margin: 40px 0 50px;
         }
     }
 }

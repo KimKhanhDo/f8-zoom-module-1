@@ -10,17 +10,18 @@
 @use './layout/header';
 @use './layout/footer';
 @use './layout/services';
+@use './layout/cta';
+@use './layout/banner';
 
 // Pages
 @use './pages/home';
 @use './pages/about';
-@use './layout/cta';
-@use './layout/banner';
+@use './pages/contact';
 
 // Components
 @use './components/logo';
 @use './components/buttons';
-@use './components/article-card';
+@use './components/media-card';
 @use './components/faq-card';
 @use './components/blog-item';
-@use './components/submenu';
+@use './components/article-card';

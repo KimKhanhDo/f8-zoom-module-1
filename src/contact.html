@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Blog</title>
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="/assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/assets/favicon/favicon.svg"
+        />
+        <link
+            rel="shortcut icon"
+            href="/assets/favicon/favicon.ico"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="manifest"
+            href="/assets/favicon/site.webmanifest"
+        />
+
+        <!-- Font -->
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/manrope/stylesheet.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/roboto-slab/stylesheet.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/inter/stylesheet.css"
+        />
+
+        <!-- Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <div class="contact">
+                <div class="container">
+                    <div class="contact__inner">
+                        <div class="row">
+                            <div class="col-5 col-md-12">
+                                <div class="contact__info">
+                                    <div class="contact__header">
+                                        <h1
+                                            class="section-heading contact__heading"
+                                        >
+                                            Contact Us
+                                        </h1>
+                                        <p class="contact__desc">
+                                            Our reports will help you better
+                                            understand your audience and target
+                                            the right message to the right
+                                            person. Send your email marketing
+                                            campaign in a fast and simple way.
+                                        </p>
+                                    </div>
+                                    <div class="contact__detail">
+                                        <div class="contact__group">
+                                            <img
+                                                src="/assets/icons/location.svg"
+                                                alt=""
+                                                class="contact__icon"
+                                            />
+                                            <span class="contact__txt"
+                                                >34 Street Name, City Name Here,
+                                                United States.</span
+                                            >
+                                        </div>
+                                        <div class="contact__group">
+                                            <img
+                                                src="/assets/icons/phone.svg"
+                                                alt=""
+                                                class="contact__icon"
+                                            />
+                                            <span class="contact__txt"
+                                                >+1 (222) 345 6789</span
+                                            >
+                                        </div>
+                                        <div class="contact__group">
+                                            <img
+                                                src="/assets/icons/email.svg"
+                                                alt=""
+                                                class="contact__icon"
+                                            />
+                                            <span class="contact__txt"
+                                                >info@mywebsite.com</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-12">
+                                <form class="contact__form">
+                                    <div class="contact__block">
+                                        <label
+                                            for="name"
+                                            class="contact__label"
+                                            >Name</label
+                                        >
+                                        <input
+                                            id="name"
+                                            type="text"
+                                            class="contact__input"
+                                        />
+                                    </div>
+                                    <div class="contact__block">
+                                        <label
+                                            for="email"
+                                            class="contact__label"
+                                            >Email</label
+                                        >
+                                        <input
+                                            id="email"
+                                            type="email"
+                                            class="contact__input"
+                                        />
+                                    </div>
+                                    <div class="contact__block">
+                                        <label
+                                            for="textarea"
+                                            class="contact__label"
+                                            >Message</label
+                                        >
+                                        <textarea
+                                            name="textarea"
+                                            id=""
+                                            class="contact__textarea"
+                                        ></textarea>
+                                    </div>
+                                    <button class="btn btn__contact">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include("./partials/footer.ejs") %>
+
+        <!-- Style -->
+        <script
+            type="module"
+            src="./main.js"
+        ></script>
+    </body>
+</html>

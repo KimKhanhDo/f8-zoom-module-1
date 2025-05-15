@@ -11,7 +11,7 @@
     &__wrapper {
         @include flex-column-center;
         gap: 4px;
-        font-family: var(--heading-font);
+        font-family: var(--roboto-font);
         text-decoration: none;
 
         // Test

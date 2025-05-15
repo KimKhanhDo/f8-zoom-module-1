@@ -1,6 +1,7 @@
 :root {
-    --heading-font: 'Roboto Slab', serif;
-    --body-font: 'Manrope', sans-serif;
+    --roboto-font: 'Roboto Slab', serif;
+    --manrope-font: 'Manrope', sans-serif;
+    --inter-font: 'Inter', sans-serif;
 
     --primary-color: #fd6038;
     --yellow-color: #fed464;
@@ -11,6 +12,9 @@
     --white-color: #fff;
     --grey-color: #586863;
     --light-grey-color: #dbe1e3;
+
     --border-color: #e6efec;
     --footer-color: #313d39;
+    --outline-color: #e3e1e1;
+    --form-input-color: #f2f2f2;
 }

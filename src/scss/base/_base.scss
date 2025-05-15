@@ -11,7 +11,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: var(--body-font);
+    font-family: var(--manrope-font);
 }
 
 button,
@@ -40,13 +40,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--heading-font);
+    font-family: var(--roboto-font);
     font-weight: 700;
 }
 
 .label {
     font-size: 1.8rem;
-    font-family: var(--heading-font);
+    font-family: var(--roboto-font);
     line-height: 1.66;
 }
 

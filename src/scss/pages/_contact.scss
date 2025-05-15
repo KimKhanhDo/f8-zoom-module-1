@@ -1,0 +1,191 @@
+@use '../base/utilities' as *;
+@use '../base/responsive' as *;
+
+.contact {
+    padding: 100px 0 150px;
+
+    @include responsive-md {
+        padding: 90px 0 130px;
+    }
+
+    @include responsive-sm {
+        padding: 70px 0 100px;
+    }
+
+    @include responsive-xs {
+        padding: 40px 50px;
+    }
+
+    &__inner {
+        @include responsive-xs {
+            padding: 0 20px;
+        }
+    }
+
+    &__heading {
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1.16;
+
+        @include responsive-lg {
+            font-size: 5.5rem;
+        }
+
+        @include responsive-md {
+            font-size: 6rem;
+        }
+
+        @include responsive-sm {
+            font-size: 5rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.5rem;
+            line-height: 1.54;
+        }
+    }
+
+    &__desc {
+        margin-top: 20px;
+        font-size: 1.4rem;
+        line-height: 1.71;
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            width: 335px;
+            font-size: 1.4rem;
+            line-height: 1.71;
+        }
+    }
+
+    &__detail {
+        margin-top: 80px;
+
+        @include responsive-md {
+            margin-top: 50px;
+        }
+
+        @include responsive-sm {
+            margin-top: 40px;
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        + .contact__group {
+            margin-top: 15px;
+        }
+
+        &:first-of-type .contact__icon {
+            margin-top: -24px;
+        }
+    }
+
+    &__txt {
+        max-width: 200px;
+        font-size: 1.5rem;
+        line-height: 1.71;
+
+        @include responsive-md {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1.4rem;
+            line-height: 1.71;
+        }
+    }
+
+    &__form {
+        margin-left: 130px;
+
+        @include responsive-lg {
+            margin-left: 50px;
+        }
+
+        @include responsive-md {
+            margin: 50px 0 0;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+
+        + .contact__block {
+            margin-top: 20px;
+        }
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.75;
+        color: var(--grey-color);
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.7rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1.6rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid var(--form-input-color);
+
+        &:focus-within {
+            outline-color: var(--outline-color);
+        }
+    }
+
+    &__input {
+        height: 50px;
+        padding: 0 15px;
+
+        @include responsive-md {
+            height: 54px;
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            height: 51px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__textarea {
+        height: 170px;
+        padding: 15px;
+        resize: none;
+
+        @include responsive-md {
+            height: 180px;
+        }
+
+        @include responsive-xs {
+            height: 170px;
+        }
+    }
+}
