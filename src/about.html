@@ -6,14 +6,391 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        <title>Document</title>
+        <title>About</title>
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="/assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/assets/favicon/favicon.svg"
+        />
+        <link
+            rel="shortcut icon"
+            href="/assets/favicon/favicon.ico"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="manifest"
+            href="/assets/favicon/site.webmanifest"
+        />
+
+        <!-- Font -->
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/manrope/stylesheet.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/roboto-slab/stylesheet.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/assets/fonts/inter/stylesheet.css"
+        />
+
+        <!-- Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
     </head>
     <body>
-        <div class="wrapper">
-            <%- include("./partials/header.ejs") %>
-            <main><h1>ABOUT</h1></main>
-            <%- include("./partials/footer.ejs") %>
-        </div>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <div class="about-page">
+                <!-- Banner -->
+                <section class="banner about-banner">
+                    <div class="container">
+                        <div class="banner__inner">
+                            <span class="about-banner__label">WHAT WE ARE</span>
+                            <h1 class="banner__heading about-banner__heading">
+                                Seriously unbelievable client service
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Media -->
+                <section class="media">
+                    <div class="container">
+                        <!-- Top -->
+                        <div class="media__top">
+                            <div class="row">
+                                <div class="col-5 col-md-12">
+                                    <div class="media__intro">
+                                        <span class="label media__label"
+                                            >WHO WE ARE</span
+                                        >
+                                        <h2
+                                            class="section-heading media__heading"
+                                        >
+                                            We look at the law differently
+                                        </h2>
+                                        <p class="media__desc">
+                                            By cooperating with over 100 lawyers
+                                            across the region, our original
+                                            values remain an integral part of
+                                            our philosophy and approach to
+                                            client work. We are perfectly placed
+                                            to take you through.
+                                        </p>
+                                        <a
+                                            href="#!"
+                                            class="btn btn__media"
+                                            >More Details</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="col-7 col-md-12">
+                                    <div class="media__visual">
+                                        <img
+                                            src="/assets/img/img-meadia-about-01.jpg"
+                                            alt="Media Image"
+                                            class="media__img"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom -->
+                        <div class="media__bottom">
+                            <div class="row">
+                                <div class="col-7 col-md-12">
+                                    <div class="media__visual">
+                                        <img
+                                            src="/assets/img/img-meadia-about-02.jpg"
+                                            alt="Media Image"
+                                            class="media__img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-5 col-md-12">
+                                    <div class="media__intro">
+                                        <span class="label media__label"
+                                            >WHAT WE DO</span
+                                        >
+                                        <h2
+                                            class="section-heading media__heading"
+                                        >
+                                            Defining success together
+                                        </h2>
+                                        <p class="media__desc">
+                                            The synergy between our real estate
+                                            and banking and finance teams
+                                            provides our clients with particular
+                                            expertise on real estate project
+                                            finance in each of the countries in
+                                            our region.
+                                        </p>
+                                        <a
+                                            href="#!"
+                                            class="btn btn__media"
+                                            >More Details</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stats -->
+                <section class="stats">
+                    <div class="container">
+                        <div class="stats__container">
+                            <div class="stats__group">
+                                <span class="stats__label"
+                                    >COMPANY FOUNDED</span
+                                >
+                                <strong class="stats__number">1984</strong>
+                            </div>
+                            <div class="stats__group">
+                                <span class="stats__label">CASES SOLVED</span>
+                                <strong class="stats__number">2450</strong>
+                            </div>
+                            <div class="stats__group">
+                                <span class="stats__label">HAPPY CLIENTS</span>
+                                <strong class="stats__number">98%</strong>
+                            </div>
+                            <div class="stats__group">
+                                <span class="stats__label">AWARDS WON</span>
+                                <strong class="stats__number">150</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Staffs -->
+                <section class="staff">
+                    <div class="staff__inner">
+                        <div class="container">
+                            <!-- Top -->
+                            <div class="staff__top">
+                                <span class="label staff__label">MEET US</span>
+                                <h2 class="section-heading staff__heading">
+                                    Our team
+                                </h2>
+                                <p class="staff__desc">
+                                    Lawyers provide best legal advice under
+                                    competitive terms.
+                                </p>
+                            </div>
+                            <!-- Bottom -->
+                            <div class="staff__bottom">
+                                <div class="staff__list">
+                                    <div class="row row-cols-3 row-cols-md-1">
+                                        <!-- Card 1 -->
+                                        <div class="col">
+                                            <div class="staff__card">
+                                                <img
+                                                    src="/assets/img/avatar-1.jpeg"
+                                                    alt="Staff Avatar"
+                                                    class="staff__avatar"
+                                                />
+                                                <div class="staff__info">
+                                                    <strong class="staff__name"
+                                                        >Anna Torpey</strong
+                                                    >
+                                                    <span class="staff__title"
+                                                        >HEAD OF LEARNING</span
+                                                    >
+                                                </div>
+                                                <div class="staff__connection">
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/facebook.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/twitter.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/linkedin.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/insta.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Card 2 -->
+                                        <div class="col">
+                                            <div class="staff__card">
+                                                <img
+                                                    src="/assets/img/avatar-2.jpeg"
+                                                    alt="Staff Avatar"
+                                                    class="staff__avatar"
+                                                />
+                                                <div class="staff__info">
+                                                    <strong class="staff__name"
+                                                        >Jonathan Kane</strong
+                                                    >
+                                                    <span class="staff__title"
+                                                        >PARTNER</span
+                                                    >
+                                                </div>
+                                                <div class="staff__connection">
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/facebook.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/twitter.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/linkedin.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/insta.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Card  -->
+                                        <div class="col">
+                                            <div class="staff__card">
+                                                <img
+                                                    src="/assets/img/avatar-3.jpeg"
+                                                    alt="Staff Avatar"
+                                                    class="staff__avatar"
+                                                />
+                                                <div class="staff__info">
+                                                    <strong class="staff__name"
+                                                        >Mark Johnson</strong
+                                                    >
+                                                    <span class="staff__title"
+                                                        >ASSOCIATE</span
+                                                    >
+                                                </div>
+                                                <div class="staff__connection">
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/facebook.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/twitter.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/linkedin.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="staff__media"
+                                                    >
+                                                        <img
+                                                            src="/assets/icons/insta.svg"
+                                                            alt="Media Icon"
+                                                            class="staff__media-icon"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <%- include("./partials/footer.ejs") %>
+
         <script
             type="module"
             src="./main.js"

@@ -299,3 +299,26 @@
         font-size: 1.6rem;
     }
 }
+
+// About Page
+.btn__media {
+    margin-top: 30px;
+    min-width: 178px;
+
+    @include responsive-md {
+        margin-top: 32px;
+    }
+
+    @include responsive-sm {
+        min-width: 170px;
+        font-size: 1.6rem;
+    }
+
+    @include responsive-xs {
+        margin-top: 21px;
+        padding: 0 25px;
+        min-width: 126px;
+        line-height: 42px;
+        font-size: 1.28rem;
+    }
+}

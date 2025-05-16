@@ -1,0 +1,345 @@
+@use '../base/utilities' as *;
+@use '../base/responsive' as *;
+
+.media {
+    padding: 150px 0;
+
+    @include responsive-lg {
+        padding: 140px 0;
+    }
+
+    @include responsive-md {
+        padding: 100px 0 150px;
+    }
+
+    @include responsive-sm {
+        padding: 80px 0 130px;
+    }
+
+    @include responsive-xs {
+        padding: 50px 20px 80px;
+    }
+
+    &__bottom {
+        @include responsive-md {
+            margin-top: 100px;
+        }
+
+        .row {
+            @include responsive-md {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__intro {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include responsive-md {
+            // margin-top: 100px;
+        }
+    }
+
+    &__label {
+        color: var(--grey-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__heading {
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-md {
+            font-size: 4.2rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 5px;
+            width: 335px;
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+        color: var(--grey-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 12px;
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__visual {
+        position: relative;
+        z-index: 1;
+        margin-left: 100px;
+
+        width: 100%;
+        max-width: 570px;
+        aspect-ratio: 1 / 1;
+
+        @include responsive-lg {
+            margin-left: 50px;
+            width: 85%;
+        }
+
+        @include responsive-md {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 90%;
+            max-width: initial;
+        }
+
+        @include responsive-sm {
+            margin-top: 80px;
+        }
+
+        @include responsive-xs {
+            width: 80%;
+            margin-top: 46px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before {
+            width: 47.89%;
+            height: 52.63%;
+            background-color: var(--primary-color);
+            right: -5.26%;
+            top: -5.26%;
+
+            @include responsive-md {
+                top: -4.5%;
+                right: 43%;
+                transform: translateX(100%);
+            }
+        }
+
+        &::after {
+            width: 47.89%;
+            height: 52.63%;
+            background-color: var(--green-color);
+            left: -5.26%;
+            bottom: -5.26%;
+
+            @include responsive-md {
+                left: 43%;
+                bottom: -4.5%;
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        overflow: hidden;
+
+        @include responsive-md {
+            // width: 90%;
+            // max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__bottom {
+        margin-top: 150px;
+
+        @include responsive-sm {
+            margin-top: 100px;
+        }
+
+        @include responsive-xs {
+            margin-top: 80px;
+        }
+
+        .media__visual {
+            margin: 0 100px 0 0;
+
+            @include responsive-md {
+                margin: 100px auto 0 auto;
+            }
+
+            @include responsive-xs {
+                margin: 46px auto 0 auto;
+            }
+        }
+    }
+}
+
+.staff {
+    padding: 150px 0;
+
+    @include responsive-lg {
+        padding: 140px 0;
+    }
+
+    @include responsive-md {
+        padding: 100px 0;
+    }
+
+    @include responsive-xs {
+        padding: 50px 0;
+    }
+
+    &__inner {
+        padding: 100px 0;
+        background: var(--black-color);
+
+        @include responsive-lg {
+            padding: 90px 0;
+        }
+
+        @include responsive-xs {
+            padding: 40px 20px;
+        }
+    }
+
+    &__top {
+        @include flex-column-center;
+    }
+
+    &__label {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__heading {
+        color: var(--white-color);
+
+        @include responsive-lg {
+            font-size: 4rem;
+        }
+
+        @include responsive-md {
+            font-size: 4.2rem;
+        }
+
+        @include responsive-sm {
+            font-size: 4rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 4.8px;
+            font-size: 3rem;
+            line-height: 1.23;
+        }
+    }
+
+    &__desc {
+        margin-top: 18px;
+        max-width: 470px;
+        font-size: 1.8rem;
+        line-height: 1.66;
+        text-align: center;
+        color: var(--light-green-color);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            max-width: initial;
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            margin-top: 13px;
+            font-size: 1.2rem;
+            line-height: 1.75;
+        }
+    }
+
+    &__bottom {
+        margin-top: 70px;
+
+        @include responsive-md {
+            margin-top: 50px;
+        }
+    }
+
+    &__list {
+        @include responsive-md {
+            .col:nth-of-type(n + 2) .staff__card {
+                margin-top: 30px;
+            }
+        }
+
+        @include responsive-xs {
+            .col:nth-of-type(n + 2) .staff__card {
+                margin-top: 20px;
+            }
+        }
+    }
+}

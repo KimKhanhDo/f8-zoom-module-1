@@ -1,0 +1,171 @@
+@use '../base/utilities' as *;
+@use '../base/responsive' as *;
+
+.staff {
+    &__card {
+        position: relative;
+        @include flex-column-center;
+        gap: 26px;
+        padding: 46px 50px 97px;
+        background: var(--white-color);
+        transition: transform 0.3s linear, box-shadow 0.3s ease;
+
+        @include responsive-lg {
+            gap: 20px;
+            padding: 30px 30px 120px;
+        }
+
+        @include responsive-sm {
+            gap: 26px;
+            padding: 30px 30px 100px;
+        }
+
+        @include responsive-xs {
+            padding: 46px 68px 80px;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 3px -4px 17px 0px rgba(230, 220, 220, 0.4);
+
+            @include responsive-md {
+                transform: none;
+            }
+        }
+
+        &:hover .staff__avatar {
+            border-color: var(--primary-color);
+        }
+
+        &:hover .staff__connection {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        + .staff__card {
+            @include responsive-md {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__avatar {
+        padding: 2px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        overflow: hidden;
+        border: 2px solid var(--white-color);
+
+        @include responsive-lg {
+            width: 150px;
+            height: 150px;
+        }
+
+        @include responsive-md {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    &__info {
+        @include flex-column-center;
+        gap: 6px;
+        font-weight: 700;
+
+        @include responsive-xs {
+            gap: 15px;
+        }
+    }
+
+    &__name {
+        font-size: 4.2rem;
+        line-height: 1.23;
+        font-family: var(--roboto-font);
+
+        @include responsive-xl {
+            font-size: 3.7rem;
+        }
+
+        @include responsive-lg {
+            font-size: 3rem;
+        }
+
+        @include responsive-md {
+            font-size: 4.2rem;
+        }
+
+        @include responsive-sm {
+            font-size: 3.5rem;
+        }
+
+        @include responsive-xs {
+            font-size: 2.4rem;
+            line-height: 1.41;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--grey-color);
+
+        @include responsive-lg {
+            font-size: 1.7rem;
+        }
+
+        @include responsive-md {
+            font-size: 2rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.8rem;
+            line-height: 1.66;
+        }
+    }
+
+    &__media {
+        padding: 13px 18px;
+
+        @include responsive-lg {
+            padding: 10px 15px;
+        }
+
+        @include responsive-md {
+            padding: 13px 18px;
+        }
+    }
+
+    &__media:hover {
+        .staff__media-icon {
+            filter: brightness(0) saturate(100%) invert(44%) sepia(71%)
+                saturate(1778%) hue-rotate(338deg) brightness(102%)
+                contrast(98%);
+        }
+    }
+
+    &__media-icon {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) saturate(100%) invert(40%) sepia(9%)
+            saturate(511%) hue-rotate(110deg) brightness(95%) contrast(93%);
+        transition: filter 0.1s linear;
+    }
+
+    &__connection {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        background: var(--form-input-color);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s linear, visibility 0.2s linear;
+    }
+}

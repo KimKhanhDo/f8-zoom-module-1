@@ -91,7 +91,7 @@
     }
 }
 
-// Blog
+// Blog Page
 .blog-banner {
     padding: 70px 0 80px;
 
@@ -149,6 +149,64 @@
         @include responsive-xs {
             font-size: 1rem;
             line-height: 1.7;
+        }
+    }
+}
+
+// About Page Panner
+.about-banner {
+    padding: 30px 0 100px;
+    background: var(--light-yellow-color);
+    // background: var(--light-green-color);
+
+    @include responsive-sm {
+        padding: 10px 20px 40px;
+    }
+
+    &__label {
+        font-size: 1.8rem;
+        line-height: 1.66;
+        font-family: var(--roboto-font);
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 1.8rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-xs {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__heading {
+        margin-top: 12px;
+        max-width: 670px;
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1.16;
+
+        @include responsive-lg {
+            font-size: 5.5rem;
+        }
+
+        @include responsive-md {
+            font-size: 5rem;
+        }
+
+        @include responsive-sm {
+            font-size: 4rem;
+        }
+
+        @include responsive-xs {
+            width: 335px;
+            font-size: 3rem;
         }
     }
 }

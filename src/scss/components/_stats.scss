@@ -1,0 +1,72 @@
+@use '../base/utilities' as *;
+@use '../base/responsive' as *;
+
+.stats {
+    color: var(--white-color);
+
+    @include responsive-xs {
+        padding: 0 20px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 55px 100px;
+        background: var(--primary-color);
+
+        @include responsive-lg {
+            padding: 48px 100px;
+        }
+
+        @include responsive-md {
+            flex-direction: column;
+            gap: 60px;
+        }
+    }
+
+    &__group {
+        @include flex-column-center;
+
+        @include responsive-md {
+            gap: 10px;
+        }
+
+        @include responsive-sm {
+            gap: 5px;
+        }
+    }
+
+    &__label {
+        font-size: 1.8rem;
+        line-height: 1.66;
+
+        @include responsive-lg {
+            font-size: 1.6rem;
+        }
+
+        @include responsive-md {
+            font-size: 2rem;
+        }
+
+        @include responsive-sm {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__number {
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1.16;
+        font-family: var(--roboto-font);
+
+        @include responsive-lg {
+            font-size: 5.5rem;
+        }
+
+        @include responsive-md {
+            font-size: 6rem;
+        }
+    }
+}
