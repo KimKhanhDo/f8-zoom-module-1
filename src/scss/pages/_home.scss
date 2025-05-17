@@ -7,15 +7,19 @@
     padding: 145px 0 150px;
 
     @include responsive-lg {
-        padding: 130px 0;
+        padding: 100px 0;
     }
 
     @include responsive-md {
-        padding: 80px 0 70px;
+        padding: 60px 0 70px;
     }
 
     @include responsive-sm {
-        padding: 50px 20px;
+        padding: 30px 0 80px;
+    }
+
+    @include responsive-xs {
+        padding: 20px 20px 30px;
     }
 
     &__label {
@@ -33,7 +37,7 @@
         line-height: 1.16;
 
         @include responsive-lg {
-            font-size: 5rem;
+            font-size: 4.8rem;
         }
 
         @include responsive-md {
@@ -41,6 +45,7 @@
         }
 
         @include responsive-sm {
+            width: 335px;
             font-size: 3.5rem;
         }
     }
@@ -56,6 +61,7 @@
         }
 
         @include responsive-xs {
+            width: 276px;
             font-size: 1rem;
             line-height: 1.7;
         }
@@ -63,15 +69,29 @@
 
     &__media {
         position: relative;
+        aspect-ratio: 470 / 476;
+        width: 100%;
+        margin-left: auto;
+
         display: flex;
         justify-content: flex-end;
 
+        @include responsive-lg {
+            width: 90%;
+        }
+
         @include responsive-md {
-            margin-top: 170px;
+            margin: 140px auto 0;
+            width: 87%;
+        }
+
+        @include responsive-sm {
+            margin: 120px auto 0;
+            width: 86%;
         }
 
         @include responsive-xs {
-            margin-top: 85px;
+            margin: 85px auto 0;
         }
     }
 
@@ -79,48 +99,38 @@
         display: block;
         position: absolute;
         z-index: 3;
-        top: -23%;
-        left: 8%;
+        top: -26.5%;
+        left: -24%;
+        transform: translate(24%, 26%);
 
-        width: 33%; /* Changed from fixed 185px to relative 30% of parent */
+        width: 35.5%; /* Changed from fixed 185px to relative 30% of parent */
         aspect-ratio: 1 / 1; /* This maintains a square shape */
         height: auto;
         cursor: pointer;
 
-        @include responsive-xl {
-            top: -20%;
-            left: 2%;
-            width: 33.5%;
-        }
-
-        @include responsive-lg {
-            top: -20%;
-            left: -20%;
-            width: 40%;
-        }
-
         @include responsive-md {
-            top: -16.2%;
-            left: -3.6%;
-            width: 31%;
+            top: -20%;
+            left: -11.5%;
+            width: 32%;
         }
 
         @include responsive-sm {
-            top: -15.8%;
-            left: -3.6%;
+            top: -25.5%;
+            left: -15%;
+            width: 35%;
         }
 
         @include responsive-xs {
-            top: -12.9%;
-            left: 0.5%;
-            width: 26.5%;
+            top: -22.5%;
+            left: -12.2%;
+            width: 32%;
         }
     }
 
     &__body {
         position: relative;
         width: 100%;
-        max-width: 470px;
+        height: 100%;
         aspect-ratio: 470 / 476;
         background: var(--green-color);
 
@@ -140,6 +150,14 @@
             width: 36.17%; /* 170px ÷ 470px ≈ 36.17% of the parent width */
             height: auto;
             background: var(--yellow-color);
+
+            @include responsive-md {
+                width: 39%;
+            }
+
+            @include responsive-sm {
+                width: 40%;
+            }
         }
     }
 
@@ -150,7 +168,7 @@
         transform: translate(-50%, -50%);
 
         width: 65%;
-        padding: 12px;
+        padding: 7px;
         aspect-ratio: 1 / 1;
         height: auto;
         object-fit: cover;
@@ -183,38 +201,31 @@
         width: 70%;
         height: 100%;
         object-fit: cover;
+
+        // Test
+        aspect-ratio: auto;
     }
 
     &__decor {
         position: absolute;
         z-index: 2;
-        top: 30.75%;
-        right: -50px;
+        top: 23%;
+        right: -8%;
 
-        width: 25%;
+        width: 22%;
         height: auto;
         object-fit: cover;
         aspect-ratio: 164 / 128;
 
-        @include responsive-xl {
-            width: 18%;
-            right: -20px;
-        }
-
-        @include responsive-lg {
-            width: 24%;
-            right: -60px;
-        }
-
-        @include responsive-sm {
-            width: 20%;
-            right: -25px;
+        @include responsive-md {
+            width: 22%;
+            right: -8%;
         }
 
         @include responsive-xs {
-            width: 18.9%;
-            top: 33.75%;
-            right: 0%;
+            width: 23%;
+            top: 27%;
+            right: -9%;
         }
     }
 }
@@ -224,8 +235,12 @@
     padding: 100px 0;
     background: var(--black-color);
 
+    @include responsive-md {
+        padding: 80px 0;
+    }
+
     @include responsive-sm {
-        padding: 90px 0;
+        padding: 80px 0;
     }
 
     @include responsive-xs {
@@ -234,53 +249,44 @@
 
     &__media {
         position: relative;
-    }
-
-    &__img {
-        display: block;
-        width: 570px;
-        height: 570px;
-
-        overflow: hidden;
-        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        max-width: 570px;
 
         @include responsive-lg {
-            width: 450px;
-            height: 450px;
+            width: 87%;
         }
 
         @include responsive-md {
             width: 100%;
-            height: 100%;
+            margin: 0 auto;
         }
 
-        @include responsive-xs {
+        @include responsive-sm {
             display: none;
         }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__decor {
         position: absolute;
         bottom: 20%;
-        right: 15%;
+        right: -12%;
 
-        width: 20%; /* relative to the image container */
+        width: 20%;
         max-width: 114px;
         aspect-ratio: 114 / 158;
+        height: auto;
 
-        @include responsive-xl {
-            bottom: 19%;
-            right: 5%;
-            width: 16%;
-        }
-
-        @include responsive-lg {
-            right: 5%;
-            bottom: 19%;
-            width: 17%;
-        }
-
-        @include responsive-md {
+        @include responsive-sm {
             display: none;
         }
     }
@@ -293,6 +299,10 @@
 
         @include responsive-md {
             margin-top: 50px;
+        }
+
+        @include responsive-sm {
+            margin-top: 0;
         }
     }
 
@@ -333,6 +343,7 @@
         color: var(--light-green-color);
 
         @include responsive-lg {
+            margin-top: 15px;
             font-size: 1.6rem;
         }
 
@@ -348,6 +359,7 @@
 
         @include responsive-xs {
             margin-top: 15px;
+            width: 330px;
             font-size: 1.2rem;
         }
     }
@@ -356,6 +368,10 @@
         display: flex;
         gap: 55px;
         margin-top: 28px;
+
+        @include responsive-lg {
+            margin-top: 20px;
+        }
 
         @include responsive-sm {
             margin-top: 15px;
@@ -367,7 +383,11 @@
         flex-direction: column;
         gap: 4px;
 
-        @include responsive-xs {
+        @include responsive-md {
+            gap: 3px;
+        }
+
+        @include responsive-sm {
             gap: 2.7px;
         }
     }
@@ -387,7 +407,7 @@
         }
 
         @include responsive-sm {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
         }
 
         @include responsive-xs {
@@ -422,22 +442,7 @@
 
 // Features
 .features {
-    // margin-top: 150px;
-
-    @include responsive-lg {
-        // margin-top: 130px;
-    }
-
-    @include responsive-md {
-        // margin-top: 100px;
-    }
-
-    @include responsive-sm {
-        // margin-top: 80px;
-    }
-
     @include responsive-xs {
-        // margin-top: 50px;
         padding: 0 20px;
     }
 
@@ -445,37 +450,29 @@
         position: relative;
         display: flex;
         justify-content: flex-end;
+
+        // Test
+        aspect-ratio: 1 / 1; // 570 / 570
+        width: 100%;
+        max-width: 570px;
+
+        @include responsive-md {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        @include responsive-xs {
+            width: 85%;
+        }
     }
 
     &__img {
-        align-self: flex-end;
-        width: 570px;
-        height: 570px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-
-        &:first-child {
-            @include responsive-xs {
-                width: 309px;
-                height: 309px;
-            }
-        }
-
-        &:last-child {
-            @include responsive-xs {
-                width: 300px;
-                height: 300px;
-            }
-        }
-
-        @include responsive-xl {
-            width: 500px;
-            height: 500px;
-        }
-
-        @include responsive-md {
-            width: 90%;
-            height: 90%;
-        }
     }
 
     &__info {
@@ -608,7 +605,7 @@
         }
 
         @include responsive-sm {
-            margin-top: 80px;
+            margin-top: 70px;
         }
 
         @include responsive-xs {
@@ -640,61 +637,40 @@
 
 .features__decor {
     &-first {
-        width: 117px;
+        position: absolute;
         top: 50%;
-        left: 0;
+        left: -9%;
         transform: translateY(-50%);
 
-        @include responsive-lg {
-            width: 78px;
-            left: -19%;
-        }
-
-        @include responsive-md {
-            width: 100px;
-            left: 4%;
-        }
-
-        @include responsive-sm {
-            width: 80px;
-        }
-    }
-
-    &-second {
-        width: 20px;
-        top: 0;
-        right: 0;
-
-        @include responsive-sm {
-            width: 15px;
-        }
+        width: 20.5%;
+        aspect-ratio: 117 / 129;
+        height: auto;
     }
 
     &-third {
-        width: 130px;
+        width: 22.81%;
+        aspect-ratio: 130 / 93;
+        left: -12%;
         top: 50%;
-        left: -7px;
         transform: translateY(-50%);
+    }
 
-        @include responsive-lg {
-            width: 100px;
-            left: -22.5%;
-        }
+    &-second,
+    &-fourth {
+        position: absolute;
+        width: 3.51%;
+        height: auto;
+        aspect-ratio: 20 / 220;
+    }
 
-        @include responsive-md {
-            width: 120px;
-            left: 0;
-        }
+    &-second {
+        top: 0;
+        right: 0;
     }
 
     &-fourth {
-        width: 20px;
         bottom: 0;
         right: 0;
-
-        @include responsive-sm {
-            width: 15px;
-        }
     }
 }
 
@@ -715,15 +691,19 @@
         margin-top: 50px;
     }
 
-    .row {
+    &__list {
         margin-top: -30px;
 
         @include responsive-lg {
             margin-top: -50px;
         }
 
-        @include responsive-xs {
-            margin-top: 0;
+        @include responsive-md {
+            margin-top: -40px;
+        }
+
+        @include responsive-sm {
+            margin-top: -20px;
         }
     }
 
@@ -737,6 +717,10 @@
     &__inner {
         padding: 100px 0;
 
+        @include responsive-lg {
+            padding: 80px 0;
+        }
+
         @include responsive-xs {
             padding: 40px 0 50px;
         }
@@ -744,6 +728,11 @@
 
     &__info {
         @include flex-column-center;
+        margin-bottom: 70px;
+
+        @include responsive-sm {
+            margin-bottom: 40px;
+        }
     }
 
     &__label {
@@ -774,7 +763,7 @@
     }
 
     &__desc {
-        margin: 18px 0 70px;
+        margin-top: 18px;
         max-width: 470px;
 
         font-size: 1.8rem;
@@ -796,7 +785,6 @@
 
         @include responsive-xs {
             margin-top: 15px;
-            margin-bottom: 40px;
             width: 335px;
             font-size: 1.2rem;
             line-height: 1.75;
@@ -811,6 +799,14 @@
             margin-top: 50px;
         }
 
+        @include responsive-md {
+            margin-top: 40px;
+        }
+
+        @include responsive-xs {
+            margin-top: 20px;
+        }
+
         &:hover .team__btn {
             opacity: 1;
             visibility: visible;
@@ -818,10 +814,6 @@
 
         &:hover img {
             transform: translateY(-10px);
-        }
-
-        @include responsive-xs {
-            margin-top: 20px;
         }
     }
 
@@ -1107,6 +1099,7 @@
         display: flex;
         justify-content: center;
         gap: 10px;
+        cursor: pointer;
     }
 
     &__dot {
@@ -1174,6 +1167,7 @@
 
     &__filter {
         font-size: 1.8rem;
+        cursor: pointer;
 
         @include responsive-lg {
             font-size: 1.6rem;
@@ -1248,6 +1242,10 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
+        }
+
+        @include responsive-xs {
+            gap: 0;
         }
     }
 

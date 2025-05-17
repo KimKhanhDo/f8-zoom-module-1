@@ -63,8 +63,6 @@
 
         .logo {
             @include responsive-md {
-                // @include flex-column-center;
-                // gap: 6px;
                 margin-top: 15px;
                 padding: 40px 30px;
             }
@@ -190,9 +188,9 @@
         }
 
         .submenu {
-            max-height: 500px; // ✅ Added
-            opacity: 1; // ✅ Added
-            visibility: visible; // ✅ Added
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
             padding: 30px 20px;
             margin: 0 auto 0;
         }
@@ -201,7 +199,7 @@
     .navbar__link {
         position: relative;
         text-decoration: none;
-        transition: color 0.2s ease, text-shadow 0.2s ease;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
 
         &::after {
             content: '';
@@ -454,12 +452,12 @@
     .navbar__link {
         position: relative;
         text-decoration: none;
-        transition: color 0.2s ease, text-shadow 0.2s ease;
+        transition: color 0.4s ease, text-shadow 0.4s ease;
 
         &::after {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 50.5%;
             right: -12px;
             transform: translateY(-50%);
 
@@ -467,7 +465,7 @@
                 center / contain;
             width: 8px;
             height: 4px;
-            transition: background-image 0.3s ease;
+            transition: background-image 0.4s ease;
 
             @include responsive-md {
                 right: -20px;
@@ -605,6 +603,10 @@
         @include responsive-xs {
             font-size: 1.2rem;
             line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 }
