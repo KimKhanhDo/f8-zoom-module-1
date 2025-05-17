@@ -43,10 +43,16 @@
         border-radius: 10px;
         background: var(--white-color);
         box-shadow: 3px 6px 60px -20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s linear;
+        cursor: pointer;
 
         &:hover {
-            transform: translateY(-12px);
+            .article__img-wrapper img {
+                transform: scale(1.1);
+            }
+
+            .article__title {
+                color: var(--primary-color);
+            }
         }
     }
 
@@ -58,6 +64,10 @@
 
         border-radius: 10px;
         cursor: pointer;
+
+        img {
+            transition: transform 0.3s linear;
+        }
     }
 
     &__img {

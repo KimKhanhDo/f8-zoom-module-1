@@ -110,13 +110,13 @@
     &__visual {
         position: relative;
         z-index: 1;
-        margin-left: 100px;
+        margin-left: 140px;
 
         width: 100%;
         max-width: 570px;
         aspect-ratio: 1 / 1;
 
-        @include responsive-lg {
+        @include responsive-xl {
             margin-left: 50px;
             width: 85%;
         }
@@ -126,7 +126,7 @@
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-            width: 90%;
+            width: 91%;
             max-width: initial;
         }
 
@@ -204,7 +204,11 @@
         }
 
         .media__visual {
-            margin: 0 100px 0 0;
+            margin-left: 30px;
+
+            @include responsive-xl {
+                // margin: 0 0 0 50px;
+            }
 
             @include responsive-md {
                 margin: 100px auto 0 auto;

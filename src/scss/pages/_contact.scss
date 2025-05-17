@@ -5,15 +5,11 @@
     padding: 100px 0 150px;
 
     @include responsive-md {
-        padding: 90px 0 130px;
+        padding: 80px 0 110px;
     }
 
     @include responsive-sm {
-        padding: 70px 0 100px;
-    }
-
-    @include responsive-xs {
-        padding: 40px 50px;
+        padding: 50px 0 80px;
     }
 
     @include responsive-xs {

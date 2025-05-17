@@ -25,7 +25,7 @@
         }
 
         &:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 3px -4px 17px 0px rgba(230, 220, 220, 0.4);
 
             @include responsive-md {
