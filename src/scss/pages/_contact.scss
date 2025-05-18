@@ -1,18 +1,17 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/responsive' as responsive;
 
 .contact {
     padding: 100px 0 150px;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         padding: 80px 0 110px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding: 50px 0 80px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 40px 20px 50px;
     }
 
@@ -21,19 +20,19 @@
         font-weight: 800;
         line-height: 1.16;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 5.5rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 6rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 5rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.5rem;
             line-height: 1.54;
         }
@@ -44,15 +43,15 @@
         font-size: 1.4rem;
         line-height: 1.71;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.4rem;
             line-height: 1.71;
         }
@@ -61,11 +60,11 @@
     &__detail {
         margin-top: 80px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 50px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 40px;
         }
     }
@@ -89,11 +88,11 @@
         font-size: 1.5rem;
         line-height: 1.71;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.4rem;
             line-height: 1.71;
         }
@@ -102,11 +101,11 @@
     &__form {
         margin-left: 130px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-left: 50px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin: 50px 0 0;
         }
     }
@@ -128,15 +127,15 @@
         line-height: 1.75;
         color: var(--grey-color);
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.7rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.6rem;
             line-height: 1.75;
         }
@@ -147,9 +146,11 @@
         width: 100%;
         border-radius: 5px;
         border: 2px solid var(--light-grey-color);
+        caret-color: var(--black);
 
-        &:focus-within {
-            outline-color: var(--outline-color);
+        &:focus {
+            outline: none;
+            border-color: var(--outline-color);
         }
     }
 
@@ -157,12 +158,12 @@
         height: 50px;
         padding: 0 15px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             height: 54px;
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             height: 51px;
             font-size: 1.5rem;
         }
@@ -173,11 +174,11 @@
         padding: 15px;
         resize: none;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             height: 180px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             height: 170px;
         }
     }

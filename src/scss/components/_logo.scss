@@ -1,22 +1,21 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 .logo {
     text-decoration: none;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: none;
     }
 
     &__wrapper {
-        @include flex-column-center;
+        @include utilities.flex-column-center;
         gap: 4px;
         font-family: var(--roboto-font);
         text-decoration: none;
 
-        // Test
         .logo {
-            @include flex-column-center;
+            @include utilities.flex-column-center;
             gap: 4px;
         }
     }
@@ -24,17 +23,17 @@
     &__icon {
         margin-left: 12px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 40px;
             height: 40px;
         }
     }
 
     &__title {
-        @include flex-column-center;
+        @include utilities.flex-column-center;
         gap: 3.5px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             gap: 4.5px;
         }
 
@@ -43,7 +42,7 @@
                 font-size: 2.4rem;
                 line-height: 0.58;
 
-                @include responsive-md {
+                @include responsive.breakpoint-md {
                     font-size: 2.6rem;
                 }
             }
@@ -52,7 +51,7 @@
                 font-size: 1.4rem;
                 line-height: 1;
 
-                @include responsive-md {
+                @include responsive.breakpoint-md {
                     font-size: 1.6rem;
                 }
             }

@@ -1,5 +1,4 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/responsive' as responsive;
 
 .btn {
     display: inline-block;
@@ -26,21 +25,21 @@
 .hero__btn {
     margin-top: 38px;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         min-width: 150px;
         font-size: 1.6rem;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         font-size: 1.8rem;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         line-height: 56px;
         font-size: 1.6rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 15px;
         min-width: 142px;
         padding: 0 20px;
@@ -55,22 +54,22 @@
     align-self: flex-start;
     min-width: 166px;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         margin-top: 40px;
         font-size: 1.6rem;
         line-height: 55px;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         font-size: 1.8rem;
         line-height: 60px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         font-size: 1.6rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 30px;
         min-width: 116px;
         line-height: 42px;
@@ -92,24 +91,24 @@
     background: var(--white-color);
     transition: color 0.2s linear, background 0.2s linear;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         font-size: 1.6rem;
         left: 50%;
         transform: translateX(-50%);
         line-height: 60px;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         min-width: 280px;
         font-size: 1.8rem;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         min-width: 400px;
         font-size: 1.6rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         min-width: 298px;
         font-size: 1.9rem;
         line-height: 65px;
@@ -127,19 +126,19 @@
 }
 
 .services__btn-view-all {
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         font-size: 1.6rem;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         font-size: 1.8rem;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         font-size: 1.6rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 0 30px;
         min-width: 136px;
         font-size: 1.8rem;
@@ -150,20 +149,20 @@
 .features__btn {
     margin-top: 38px;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         font-size: 1.6rem;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         font-size: 1.8rem;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding: 0 25px;
         font-size: 1.6rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         min-width: 128px;
         font-size: 1.2rem;
         line-height: 42px;
@@ -188,23 +187,23 @@
     visibility: hidden;
     transition: all 0.3s linear;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         min-width: 220px;
         line-height: 55px;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         min-width: 170px;
         font-size: 1.6rem;
         line-height: 50px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         min-width: 250px;
         line-height: 55px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         min-width: 171px;
         font-size: 1.8rem;
         line-height: 60px;
@@ -216,7 +215,7 @@
     }
 
     &-all {
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             min-width: 171px;
         }
     }
@@ -233,7 +232,7 @@
     background: var(--black-color);
     transition: background 0.2s linear;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         width: 45px;
         height: 45px;
     }
@@ -252,7 +251,7 @@
 .btn__blog {
     min-width: 158px;
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         display: none;
     }
 }
@@ -262,7 +261,7 @@
     margin-top: 38px;
     min-width: 242px;
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 33px;
         min-width: 142px;
         line-height: 35px;
@@ -272,7 +271,7 @@
 
 // Article btn
 .article__btn {
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         min-width: 160px;
         font-size: 1.6rem;
     }
@@ -288,15 +287,15 @@
     font-size: 1.6rem;
     font-weight: 500;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         font-size: 1.8rem;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         font-size: 1.7rem;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         min-width: 150px;
         font-size: 1.6rem;
     }
@@ -307,16 +306,16 @@
     margin-top: 30px;
     min-width: 178px;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         margin-top: 32px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         min-width: 170px;
         font-size: 1.6rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 21px;
         padding: 0 25px;
         min-width: 126px;

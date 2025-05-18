@@ -1,16 +1,16 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 .drawer-open {
     display: none;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         width: 30px;
         height: 30px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         width: 18px;
     }
 
@@ -23,7 +23,7 @@
 .drawer-close {
     display: none;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         position: absolute;
         top: 0;
@@ -37,8 +37,8 @@
 }
 
 .nav-wrapper {
-    @include responsive-md {
-        @include flex-column-center;
+    @include responsive.breakpoint-md {
+        @include utilities.flex-column-center;
         position: fixed;
         z-index: 999;
         top: 0;
@@ -52,17 +52,17 @@
         transition: transform 0.5s ease;
     }
 
-    // Logo inside responsive nav
+    // Logo inside breakpoint nav
     .logo__wrapper {
         display: none;
         text-decoration: none;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             display: block;
         }
 
         .logo {
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 margin-top: 15px;
                 padding: 40px 30px;
             }
@@ -71,7 +71,7 @@
 }
 
 .drawer-overlay {
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         position: fixed;
         z-index: 2;
@@ -80,8 +80,7 @@
 
         opacity: 0;
         visibility: hidden;
-        transition: opacity ease, visibility ease;
-        transition-duration: 0.5s;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
     }
 }
 
@@ -98,7 +97,7 @@
 .header {
     background: var(--light-yellow-color);
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 0 20px;
     }
 
@@ -108,11 +107,11 @@
         align-items: center;
         padding: 30px 0;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             padding: 50px 0 30px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 32px 0 0;
         }
     }
@@ -120,7 +119,7 @@
 
 // Navbar
 .navbar {
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         width: 100%;
         height: 100vh;
@@ -130,13 +129,15 @@
         display: flex;
         gap: 20px;
 
-        @include responsive-md {
-            @include flex-column-center;
+        @include responsive.breakpoint-md {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             overflow-y: auto;
             overscroll-behavior: contain;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             gap: 5px;
         }
     }
@@ -148,17 +149,18 @@
     line-height: 1.75;
     cursor: pointer;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
+        @include utilities.flex-display-center;
         width: 100%;
         font-size: 2rem;
         text-align: center;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         font-size: 1.8rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         font-size: 1.6rem;
     }
 
@@ -166,13 +168,13 @@
         font-weight: 600;
         color: var(--primary-color);
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-weight: normal;
             color: inherit;
         }
 
         .navbar__link::after {
-            background: url('/assets/icons/arrow-up-orange.svg') no-repeat
+            background: url('./assets/icons/arrow-up-orange.svg') no-repeat
                 center / contain;
         }
     }
@@ -184,15 +186,14 @@
         }
 
         .navbar__link::after {
-            background-image: url('/assets/icons/arrow-up-orange.svg');
+            background-image: url('./assets/icons/arrow-up-orange.svg');
         }
 
         .submenu {
+            margin: 0 auto;
             max-height: 500px;
             opacity: 1;
             visibility: visible;
-            padding: 30px 20px;
-            margin: 0 auto 0;
         }
     }
 
@@ -201,6 +202,16 @@
         text-decoration: none;
         transition: color 0.3s ease, text-shadow 0.3s ease;
 
+        @include responsive.breakpoint-md {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            width: 100%;
+            max-width: 230px;
+            text-align: left;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -208,19 +219,19 @@
             right: -12px;
             transform: translateY(-50%);
 
-            background: url('/assets/icons/arrow-down-black.svg') no-repeat
+            background: url('./assets/icons/arrow-down-black.svg') no-repeat
                 center / contain;
             width: 8px;
             height: 4px;
             transition: background-image 0.3s ease;
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 right: -20px;
                 width: 12px;
                 height: 8px;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 right: -18px;
                 width: 10px;
                 height: 6px;
@@ -232,13 +243,13 @@
 .drawer-open {
     display: none;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         width: 30px;
         height: 30px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         width: 18px;
     }
 
@@ -251,7 +262,7 @@
 .drawer-close {
     display: none;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         position: absolute;
         top: 0;
@@ -265,8 +276,8 @@
 }
 
 .nav-wrapper {
-    @include responsive-md {
-        @include flex-column-center;
+    @include responsive.breakpoint-md {
+        @include utilities.flex-column-center;
         position: fixed;
         z-index: 999;
         top: 0;
@@ -280,19 +291,17 @@
         transition: transform 0.5s ease;
     }
 
-    // Logo inside responsive nav
+    // Logo inside breakpoint nav
     .logo__wrapper {
         display: none;
         text-decoration: none;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             display: block;
         }
 
         .logo {
-            @include responsive-md {
-                // @include flex-column-center;
-                // gap: 6px;
+            @include responsive.breakpoint-md {
                 margin-top: 15px;
                 padding: 40px 30px;
             }
@@ -301,7 +310,7 @@
 }
 
 .drawer-overlay {
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         display: block;
         position: fixed;
         z-index: 2;
@@ -328,7 +337,7 @@
 .header {
     background: var(--light-yellow-color);
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 0 20px;
     }
 
@@ -338,61 +347,60 @@
         align-items: center;
         padding: 30px 0;
 
-        // Test
-
-        @include responsive-md {
-            // padding: 50px 0 30px;
+        @include responsive.breakpoint-md {
             padding: 50px 0;
         }
 
-        @include responsive-xs {
-            // padding: 32px 0 0;
+        @include responsive.breakpoint-xs {
             padding: 30px 0;
         }
     }
 }
 
-// Navbar
+// Navbar breakpoint
 .navbar {
-    @include responsive-md {
-        display: block;
-        width: 100%;
-        height: 100vh;
-    }
+    // @include responsive.breakpoint-md {
+    //     display: block;
+    //     width: 100%;
+    //     height: 100vh;
+    // }
 
     &__list {
         display: flex;
         gap: 20px;
 
-        @include responsive-md {
-            @include flex-column-center;
+        @include responsive.breakpoint-md {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             overflow-y: auto;
             overscroll-behavior: contain;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             gap: 5px;
+            padding: 30px;
         }
     }
 }
 
 .navbar__item {
     position: relative;
-    padding: 15px;
+    padding: 15px 20px;
     line-height: 1.75;
     cursor: pointer;
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         width: 100%;
         font-size: 2rem;
         text-align: center;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         font-size: 1.8rem;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         font-size: 1.6rem;
     }
 
@@ -400,13 +408,13 @@
         font-weight: 600;
         color: var(--primary-color);
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-weight: normal;
             color: inherit;
         }
 
         .navbar__link::after {
-            background: url('/assets/icons/arrow-up-orange.svg') no-repeat
+            background: url('./assets/icons/arrow-up-orange.svg') no-repeat
                 center / contain;
         }
     }
@@ -418,28 +426,31 @@
         }
 
         .navbar__link::after {
-            background-image: url('/assets/icons/arrow-up-orange.svg');
+            background-image: url('./assets/icons/arrow-up-orange.svg');
         }
 
         .submenu {
-            opacity: 1;
-            visibility: visible;
-
-            @include responsive-md {
-                max-height: 500px;
+            @include responsive.breakpoint-md {
                 margin-top: 12px;
                 padding: 20px 40px;
-                position: initial;
-                width: 60%;
+
+                max-height: 500px;
+                width: 80%;
+
+                left: 10%;
+                top: 50px;
             }
 
-            @include responsive-sm {
-                width: 60%;
+            @include responsive.breakpoint-sm {
                 padding: 20px 30px;
+                width: 72%;
+                left: 17%;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 padding: 20px;
+                width: 100%;
+                left: 0;
             }
 
             &::before {
@@ -461,19 +472,19 @@
             right: -12px;
             transform: translateY(-50%);
 
-            background: url('/assets/icons/arrow-down-black.svg') no-repeat
+            background: url('./assets/icons/arrow-down-black.svg') no-repeat
                 center / contain;
             width: 8px;
             height: 4px;
             transition: background-image 0.4s ease;
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 right: -20px;
                 width: 12px;
                 height: 8px;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 right: -18px;
                 width: 10px;
                 height: 6px;
@@ -487,7 +498,7 @@
     position: absolute;
     z-index: 999;
     top: 100%;
-    left: 0;
+    left: -16%;
 
     padding: 12px;
     width: 185px;
@@ -515,13 +526,13 @@
         width: 100%;
 
         + .submenu__item {
-            margin-top: 12px;
+            margin-top: 15px;
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 margin-top: 20px;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 margin-top: 15px;
             }
         }
@@ -532,26 +543,27 @@
             }
 
             .submenu__icon {
-                content: url('/assets/icons/arrow-right-orange.svg');
+                content: url('./assets/icons/arrow-right-orange.svg');
             }
         }
     }
 
     &__link {
         display: block;
+        width: 100%;
         font-size: 1.6rem;
         line-height: 1.75;
         color: var(--grey-color);
         text-decoration: none;
         transition: color 0.2s linear;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             text-align: left;
             width: 100%;
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
     }
@@ -567,7 +579,7 @@
         margin-right: 4px;
         line-height: 1.75;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1rem;
         }
     }
@@ -577,30 +589,7 @@
         font-weight: 700;
         line-height: 1.45;
 
-        @include responsive-xs {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-    }
-}
-
-// Phone
-.phone {
-    &__label {
-        margin-right: 4px;
-        line-height: 1.75;
-
-        @include responsive-xs {
-            font-size: 1rem;
-        }
-    }
-
-    &__number {
-        font-size: 2.2rem;
-        font-weight: 700;
-        line-height: 1.45;
-
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.6;
         }

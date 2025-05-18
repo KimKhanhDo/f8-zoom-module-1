@@ -1,12 +1,11 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/responsive' as responsive;
 
 .blog__item {
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         margin-top: 60px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 40px;
     }
 
@@ -29,7 +28,7 @@
     &-info {
         margin-top: 20px;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 18px;
         }
     }
@@ -42,21 +41,21 @@
         line-height: 1.45;
         transition: color 0.2s linear;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.9rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 100%;
             max-width: initial;
             font-size: 2.2rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 2rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 18px;
             font-size: 1.9rem;
             line-height: 1.52;
@@ -78,15 +77,15 @@
         text-decoration: none;
         transition: color 0.1s linear;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 11px;
         }
 
@@ -111,17 +110,17 @@
         height: 64px;
         border-radius: 50%;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             width: 55px;
             height: 55px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 70px;
             height: 70px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 57px;
             height: 57px;
         }
@@ -136,7 +135,7 @@
         font-size: 1.8rem;
         font-weight: 600;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.6rem;
             line-height: 1.68;
         }
@@ -147,7 +146,7 @@
         line-height: 1.75;
         color: var(--grey-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.4rem;
             line-height: 1.78;
         }

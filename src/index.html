@@ -7,48 +7,7 @@
             content="width=device-width, initial-scale=1.0"
         />
         <title>Law Firm</title>
-
-        <!-- Favicon -->
-        <link
-            rel="icon"
-            type="image/png"
-            href="/assets/favicon/favicon-96x96.png"
-            sizes="96x96"
-        />
-        <link
-            rel="icon"
-            type="image/svg+xml"
-            href="/assets/favicon/favicon.svg"
-        />
-        <link
-            rel="shortcut icon"
-            href="/assets/favicon/favicon.ico"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/assets/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="manifest"
-            href="/assets/favicon/site.webmanifest"
-        />
-
-        <!-- Font -->
-        <link
-            rel="stylesheet"
-            href="/assets/fonts/manrope/stylesheet.css"
-        />
-        <link
-            rel="stylesheet"
-            href="/assets/fonts/roboto-slab/stylesheet.css"
-        />
-
-        <!-- Icon -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        />
+        <%- include("./partials/head.ejs") %>
     </head>
     <body>
         <%- include("./partials/header.ejs") %>
@@ -87,12 +46,12 @@
                                     class="hero__media-box"
                                 >
                                     <img
-                                        src="/assets/img/img-hero-play-video.png"
+                                        src="./assets/img/img-hero-play-video.png"
                                         alt=""
                                         class="hero__play"
                                     />
                                     <img
-                                        src="/assets/img/img-hero-decor-letters.png"
+                                        src="./assets/img/img-hero-decor-letters.png"
                                         alt="image-decor"
                                         class="hero__letters"
                                     />
@@ -100,13 +59,13 @@
 
                                 <div class="hero__body">
                                     <img
-                                        src="/assets/img/img-hero-media.jpg"
+                                        src="./assets/img/img-hero-media.jpg"
                                         alt="hero-media"
                                         class="hero__img"
                                     />
 
                                     <img
-                                        src="/assets/img/img-hero-deco.png"
+                                        src="./assets/img/img-hero-deco.png"
                                         alt="image-decor"
                                         class="hero__decor"
                                     />
@@ -126,12 +85,12 @@
                             <div class="col-7 col-md-12">
                                 <div class="about__media">
                                     <img
-                                        src="/assets/img/img-about-image.jpg"
+                                        src="./assets/img/img-about-image.jpg"
                                         alt="media-image"
                                         class="about__img"
                                     />
                                     <img
-                                        src="/assets/img/img-about-decor.png"
+                                        src="./assets/img/img-about-decor.png"
                                         alt="decor-image"
                                         class="about__decor"
                                     />
@@ -214,7 +173,7 @@
                                         class="services__thumb"
                                     >
                                         <img
-                                            src="/assets/img/img-services-01.jpg"
+                                            src="./assets/img/img-services-01.jpg"
                                             alt="Service Image"
                                         />
                                     </a>
@@ -233,7 +192,7 @@
                                         class="services__thumb"
                                     >
                                         <img
-                                            src="/assets/img/img-services-02.jpg"
+                                            src="./assets/img/img-services-02.jpg"
                                             alt="Service Image"
                                         />
                                     </a>
@@ -252,7 +211,7 @@
                                         class="services__thumb"
                                     >
                                         <img
-                                            src="/assets/img/img-services-03.jpg"
+                                            src="./assets/img/img-services-03.jpg"
                                             alt="Service Image"
                                         />
                                     </a>
@@ -271,7 +230,7 @@
                                         class="services__thumb"
                                     >
                                         <img
-                                            src="/assets/img/img-services-04.jpg"
+                                            src="./assets/img/img-services-04.jpg"
                                             alt="Service Image"
                                         />
                                     </a>
@@ -290,7 +249,7 @@
                                         class="services__thumb"
                                     >
                                         <img
-                                            src="/assets/img/img-services-05.jpg"
+                                            src="./assets/img/img-services-05.jpg"
                                             alt="Service Image"
                                         />
                                     </a>
@@ -309,7 +268,7 @@
                                         class="services__thumb"
                                     >
                                         <img
-                                            src="/assets/img/img-services-06.jpg"
+                                            src="./assets/img/img-services-06.jpg"
                                             alt="Service Image"
                                         />
                                     </a>
@@ -342,17 +301,17 @@
                             <div class="col-6 col-md-12">
                                 <div class="features__media">
                                     <img
-                                        src="/assets/img/img-features-01.jpg"
+                                        src="./assets/img/img-features-01.jpg"
                                         alt="Feature Image"
                                         class="features__img"
                                     />
                                     <img
-                                        src="/assets/img/img-features-decor-01.png"
+                                        src="./assets/img/img-features-decor-01.png"
                                         alt="Feature Decor"
                                         class="features__decor-first"
                                     />
                                     <img
-                                        src="/assets/img/img-features-decor-02.png"
+                                        src="./assets/img/img-features-decor-02.png"
                                         alt="Feature Decor"
                                         class="features__decor-second"
                                     />
@@ -421,17 +380,17 @@
                             <div class="col-6 col-md-12">
                                 <div class="features__media">
                                     <img
-                                        src="/assets/img/img-features-02.jpg"
+                                        src="./assets/img/img-features-02.jpg"
                                         alt="Feature Image"
                                         class="features__img"
                                     />
                                     <img
-                                        src="/assets/img/img-features-decor-03.png"
+                                        src="./assets/img/img-features-decor-03.png"
                                         alt="Feature Decor"
                                         class="features__decor-third"
                                     />
                                     <img
-                                        src="/assets/img/img-features-decor-04.png"
+                                        src="./assets/img/img-features-decor-04.png"
                                         alt="Feature Decor"
                                         class="features__decor-fourth"
                                     />
@@ -470,7 +429,7 @@
                                             class="team__thumb"
                                         >
                                             <img
-                                                src="/assets/img/img-team-01.jpg"
+                                                src="./assets/img/img-team-01.jpg"
                                                 alt="Team Member Photo"
                                             />
                                         </a>
@@ -498,7 +457,7 @@
                                             class="team__thumb"
                                         >
                                             <img
-                                                src="/assets/img/img-team-02.jpg"
+                                                src="./assets/img/img-team-02.jpg"
                                                 alt="Team Member Photo"
                                             />
                                         </a>
@@ -526,7 +485,7 @@
                                             class="team__thumb"
                                         >
                                             <img
-                                                src="/assets/img/img-team-03.jpg"
+                                                src="./assets/img/img-team-03.jpg"
                                                 alt="Team Member Photo"
                                             />
                                         </a>
@@ -552,7 +511,7 @@
                                             class="team__thumb"
                                         >
                                             <img
-                                                src="/assets/img/img-team-04.jpg"
+                                                src="./assets/img/img-team-04.jpg"
                                                 alt="Team Member Photo"
                                             />
                                         </a>
@@ -580,7 +539,7 @@
                                             class="team__thumb"
                                         >
                                             <img
-                                                src="/assets/img/img-team-05.jpg"
+                                                src="./assets/img/img-team-05.jpg"
                                                 alt="Team Member Photo"
                                             />
                                         </a>
@@ -608,7 +567,7 @@
                                             class="team__thumb"
                                         >
                                             <img
-                                                src="/assets/img/img-team-06.jpg"
+                                                src="./assets/img/img-team-06.jpg"
                                                 alt="Team Member Photo"
                                             />
                                         </a>
@@ -659,7 +618,7 @@
                                 <div class="col">
                                     <div class="awards__wrapper">
                                         <img
-                                            src="/assets/img/img-awards-01.png"
+                                            src="./assets/img/img-awards-01.png"
                                             alt="Company Logo"
                                             class="awards__thumb"
                                         />
@@ -668,7 +627,7 @@
                                 <div class="col">
                                     <div class="awards__wrapper">
                                         <img
-                                            src="/assets/img/img-awards-02.png"
+                                            src="./assets/img/img-awards-02.png"
                                             alt="Company Logo"
                                             class="awards__thumb"
                                         />
@@ -677,7 +636,7 @@
                                 <div class="col">
                                     <div class="awards__wrapper">
                                         <img
-                                            src="/assets/img/img-awards-03.png"
+                                            src="./assets/img/img-awards-03.png"
                                             alt="Company Logo"
                                             class="awards__thumb"
                                         />
@@ -686,7 +645,7 @@
                                 <div class="col">
                                     <div class="awards__wrapper">
                                         <img
-                                            src="/assets/img/img-awards-04.png"
+                                            src="./assets/img/img-awards-04.png"
                                             alt="Company Logo"
                                             class="awards__thumb"
                                         />
@@ -718,7 +677,7 @@
                                     class="testimonial__btn testimonial__btn-left"
                                 >
                                     <img
-                                        src="/assets/icons/arrow-left.svg"
+                                        src="./assets/icons/arrow-left.svg"
                                         alt="Arrow Icon"
                                     />
                                 </button>
@@ -726,7 +685,7 @@
                                     class="testimonial__btn testimonial__btn-right"
                                 >
                                     <img
-                                        src="/assets/icons/arrow-right.svg"
+                                        src="./assets/icons/arrow-right.svg"
                                         alt="Arrow Icon"
                                     />
                                 </button>
@@ -739,7 +698,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <img
-                                            src="/assets/img/avatar-1.jpeg"
+                                            src="./assets/img/avatar-1.jpeg"
                                             alt="Client Avatar"
                                             class="card__avatar"
                                         />
@@ -757,7 +716,7 @@
                                         </p>
                                         <div class="card__info">
                                             <img
-                                                src="/assets/icons/quote.svg"
+                                                src="./assets/icons/quote.svg"
                                                 alt="Quote Icon"
                                                 class="card__quote"
                                             />
@@ -775,7 +734,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <img
-                                            src="/assets/img/avatar-2.jpeg"
+                                            src="./assets/img/avatar-2.jpeg"
                                             alt="Client Avatar"
                                             class="card__avatar"
                                         />
@@ -793,7 +752,7 @@
                                         </p>
                                         <div class="card__info">
                                             <img
-                                                src="/assets/icons/quote.svg"
+                                                src="./assets/icons/quote.svg"
                                                 alt="Quote Icon"
                                                 class="card__quote"
                                             />
@@ -811,7 +770,7 @@
                                 <div class="col">
                                     <div class="card">
                                         <img
-                                            src="/assets/img/avatar-3.jpeg"
+                                            src="./assets/img/avatar-3.jpeg"
                                             alt="Client Avatar"
                                             class="card__avatar"
                                         />
@@ -829,7 +788,7 @@
                                         </p>
                                         <div class="card__info">
                                             <img
-                                                src="/assets/icons/quote.svg"
+                                                src="./assets/icons/quote.svg"
                                                 alt="Quote Icon"
                                                 class="card__quote"
                                             />
@@ -886,7 +845,7 @@
                                     <button class="faq__card-btn">
                                         <img
                                             class="faq__card-icon"
-                                            src="/assets/icons/arrow-down-white.svg"
+                                            src="./assets/icons/arrow-down-white.svg"
                                             alt="Arrow Down Icon"
                                         />
                                     </button>
@@ -914,7 +873,7 @@
                                     <button class="faq__card-btn">
                                         <img
                                             class="faq__card-icon"
-                                            src="/assets/icons/arrow-down-white.svg"
+                                            src="./assets/icons/arrow-down-white.svg"
                                             alt="Arrow Down Icon"
                                         />
                                     </button>
@@ -942,7 +901,7 @@
                                     <button class="faq__card-btn">
                                         <img
                                             class="faq__card-icon"
-                                            src="/assets/icons/arrow-down-white.svg"
+                                            src="./assets/icons/arrow-down-white.svg"
                                             alt="Arrow Down Icon"
                                         />
                                     </button>
@@ -998,7 +957,7 @@
                                     <div class="blog__item">
                                         <a href="#!">
                                             <img
-                                                src="/assets/img/img-blog-01.png"
+                                                src="./assets/img/img-blog-01.png"
                                                 alt="Blog Image"
                                                 class="blog__item-img"
                                             />
@@ -1006,7 +965,7 @@
                                         <div class="blog__item-info">
                                             <div class="author">
                                                 <img
-                                                    src="/assets/img/avatar-1.jpeg"
+                                                    src="./assets/img/avatar-1.jpeg"
                                                     alt="Author Avatar"
                                                     class="author__avatar"
                                                 />
@@ -1041,7 +1000,7 @@
                                     <div class="blog__item">
                                         <a href="#!">
                                             <img
-                                                src="/assets/img/img-blog-02.png"
+                                                src="./assets/img/img-blog-02.png"
                                                 alt="Blog Image"
                                                 class="blog__item-img"
                                             />
@@ -1049,7 +1008,7 @@
                                         <div class="blog__item-info">
                                             <div class="author">
                                                 <img
-                                                    src="/assets/img/avatar-2.jpeg"
+                                                    src="./assets/img/avatar-2.jpeg"
                                                     alt="Author Avatar"
                                                     class="author__avatar"
                                                 />
@@ -1083,7 +1042,7 @@
                                     <div class="blog__item">
                                         <a href="#!">
                                             <img
-                                                src="/assets/img/img-blog-03.png"
+                                                src="./assets/img/img-blog-03.png"
                                                 alt="Blog Image"
                                                 class="blog__item-img"
                                             />
@@ -1091,7 +1050,7 @@
                                         <div class="blog__item-info">
                                             <div class="author">
                                                 <img
-                                                    src="/assets/img/avatar-3.jpeg"
+                                                    src="./assets/img/avatar-3.jpeg"
                                                     alt="Author Avatar"
                                                     class="author__avatar"
                                                 />

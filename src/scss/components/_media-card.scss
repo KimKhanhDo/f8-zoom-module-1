@@ -1,20 +1,19 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/responsive' as responsive;
 
 .card {
     padding: 30px 43px;
     border: 1px solid var(--border-color);
     transition: transform 0.3s linear;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         padding: 30px 20px;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         padding: 40px 45px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding: 30px 35px;
     }
 
@@ -31,17 +30,17 @@
         border-radius: 50%;
         object-fit: cover;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             width: 55px;
             height: 55px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 70px;
             height: 70px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 57px;
             height: 57px;
         }
@@ -53,12 +52,12 @@
         line-height: 1.66;
         color: var(--grey-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: 20px;
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             letter-spacing: 0.1rem;
         }
     }
@@ -68,11 +67,11 @@
         display: flex;
         flex-direction: column;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: 20px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 30px;
         }
     }
@@ -80,7 +79,7 @@
     &__quote {
         width: 27px;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 24px;
         }
     }
@@ -91,15 +90,15 @@
         font-weight: 700;
         line-height: 1.5;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.9rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 2rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.8rem;
             line-height: 1.5;
         }
@@ -109,7 +108,7 @@
         font-size: 1.4rem;
         line-height: 1.71;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }

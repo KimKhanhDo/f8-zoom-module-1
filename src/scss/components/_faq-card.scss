@@ -1,27 +1,27 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 .faq__card {
     position: relative;
     max-width: 770px;
     padding-bottom: 30px;
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding-bottom: 25px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding-bottom: 15px;
     }
 
     + .faq__card {
         margin-top: 30px;
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 25px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding-bottom: 15px;
         }
     }
@@ -66,29 +66,29 @@
         line-height: 1.45;
         cursor: pointer;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 2rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1rem;
             line-height: 1.4;
         }
     }
 
     &-btn {
-        @include flex-display-center;
+        @include utilities.flex-display-center;
         width: 28px;
         height: 28px;
         background: var(--black-color);
         transition: background 0.5s ease;
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             width: 25px;
             height: 25px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 12px;
             height: 12px;
         }
@@ -110,15 +110,15 @@
         opacity: 0;
         transition: max-height 1.3s ease, opacity 1.3s ease;
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 0.9rem;
             line-height: 1.45;
         }
@@ -126,7 +126,7 @@
         &-inner {
             padding: 30px;
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 padding: 13px;
             }
         }

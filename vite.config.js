@@ -3,7 +3,7 @@ import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import path from 'path';
 
 export default defineConfig({
-    base: '/f8-zoom-module-1',
+    base: process.env.NODE_ENV === 'production' ? '/f8-zoom-module-1' : '/',
     root: 'src',
     publicDir: '../public',
     build: {

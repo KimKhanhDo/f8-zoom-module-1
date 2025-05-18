@@ -1,26 +1,26 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 .staff {
     &__card {
         position: relative;
-        @include flex-column-center;
+        @include utilities.flex-column-center;
         gap: 26px;
         padding: 46px 50px 97px;
         background: var(--white-color);
         transition: transform 0.3s linear, box-shadow 0.3s ease;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             gap: 20px;
             padding: 30px 30px 120px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             gap: 26px;
             padding: 30px 30px 100px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 46px 68px 80px;
         }
 
@@ -28,7 +28,7 @@
             transform: translateY(-5px);
             box-shadow: 3px -4px 17px 0px rgba(230, 220, 220, 0.4);
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 transform: none;
             }
         }
@@ -43,7 +43,7 @@
         }
 
         + .staff__card {
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 margin-top: 30px;
             }
         }
@@ -58,23 +58,23 @@
         overflow: hidden;
         border: 2px solid var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             width: 150px;
             height: 150px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 200px;
             height: 200px;
         }
     }
 
     &__info {
-        @include flex-column-center;
+        @include utilities.flex-column-center;
         gap: 6px;
         font-weight: 700;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             gap: 15px;
         }
     }
@@ -84,23 +84,23 @@
         line-height: 1.23;
         font-family: var(--roboto-font);
 
-        @include responsive-xl {
+        @include responsive.breakpoint-xl {
             font-size: 3.7rem;
         }
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 3rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 4.2rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.5rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 2.4rem;
             line-height: 1.41;
         }
@@ -112,15 +112,15 @@
         line-height: 1.5;
         color: var(--grey-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.7rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 2rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.8rem;
             line-height: 1.66;
         }
@@ -129,11 +129,11 @@
     &__media {
         padding: 13px 18px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             padding: 10px 15px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             padding: 13px 18px;
         }
     }

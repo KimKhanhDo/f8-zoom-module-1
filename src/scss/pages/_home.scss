@@ -1,29 +1,29 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 /* Hero */
 .hero {
     background: var(--light-yellow-color);
     padding: 145px 0 150px;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         padding: 100px 0;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         padding: 60px 0 70px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding: 30px 0 80px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 20px 20px 30px;
     }
 
     &__label {
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1rem;
         }
     }
@@ -36,15 +36,15 @@
         font-weight: 800;
         line-height: 1.16;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4.8rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             width: 335px;
             font-size: 3.5rem;
         }
@@ -56,11 +56,11 @@
         font-size: 1.8rem;
         line-height: 1.66;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 276px;
             font-size: 1rem;
             line-height: 1.7;
@@ -76,21 +76,21 @@
         display: flex;
         justify-content: flex-end;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             width: 90%;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin: 140px auto 0;
             width: 87%;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin: 120px auto 0;
             width: 86%;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin: 85px auto 0;
         }
     }
@@ -108,19 +108,19 @@
         height: auto;
         cursor: pointer;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             top: -20%;
             left: -11.5%;
             width: 32%;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             top: -25.5%;
             left: -15%;
             width: 35%;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             top: -22.5%;
             left: -12.2%;
             width: 32%;
@@ -134,7 +134,7 @@
         aspect-ratio: 470 / 476;
         background: var(--green-color);
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             max-width: initial;
             width: 90%;
             margin-left: auto;
@@ -151,11 +151,11 @@
             height: auto;
             background: var(--yellow-color);
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 width: 39%;
             }
 
-            @include responsive-sm {
+            @include responsive.breakpoint-sm {
                 width: 40%;
             }
         }
@@ -173,11 +173,11 @@
         height: auto;
         object-fit: cover;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             padding: 8px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 3px;
         }
     }
@@ -217,12 +217,12 @@
         object-fit: cover;
         aspect-ratio: 164 / 128;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 22%;
             right: -8%;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 23%;
             top: 27%;
             right: -9%;
@@ -235,15 +235,15 @@
     padding: 100px 0;
     background: var(--black-color);
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         padding: 80px 0;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding: 80px 0;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 30px 25px;
     }
 
@@ -253,16 +253,16 @@
         width: 100%;
         max-width: 570px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             width: 87%;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 100%;
             margin: 0 auto;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             display: none;
         }
     }
@@ -286,7 +286,7 @@
         aspect-ratio: 114 / 158;
         height: auto;
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             display: none;
         }
     }
@@ -297,11 +297,11 @@
         align-items: flex-start;
         height: 100%;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 50px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 0;
         }
     }
@@ -309,7 +309,7 @@
     &__label {
         color: var(--primary-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
         }
     }
@@ -318,16 +318,16 @@
         max-width: 469px;
         color: var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 12px;
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 10px;
             width: 329px;
             font-size: 3rem;
@@ -342,22 +342,22 @@
         line-height: 1.66;
         color: var(--light-green-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: 15px;
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 22px;
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 18px;
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 15px;
             width: 330px;
             font-size: 1.2rem;
@@ -369,11 +369,11 @@
         gap: 55px;
         margin-top: 28px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: 20px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 15px;
         }
     }
@@ -383,11 +383,11 @@
         flex-direction: column;
         gap: 4px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             gap: 3px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             gap: 2.7px;
         }
     }
@@ -398,19 +398,19 @@
         line-height: 1.41;
         color: var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 2.2rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 3rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 2.4rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.6rem;
             line-height: 1.4;
         }
@@ -421,19 +421,19 @@
         line-height: 1.75;
         color: var(--light-green-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.12rem;
             line-height: 1.75;
         }
@@ -442,7 +442,7 @@
 
 // Features
 .features {
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 0 20px;
     }
 
@@ -456,12 +456,12 @@
         width: 100%;
         max-width: 570px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             width: 85%;
             margin: 0 auto;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 85%;
         }
     }
@@ -482,11 +482,11 @@
         flex-direction: column;
         justify-content: center;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-left: 80px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-left: 0;
         }
     }
@@ -494,22 +494,22 @@
     &__label {
         color: var(--grey-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
     }
 
     &__heading {
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 5px;
             font-size: 3rem;
             line-height: 1.23;
@@ -522,19 +522,19 @@
         line-height: 1.66;
         color: var(--grey-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 15px;
             font-size: 1.2rem;
             line-height: 1.75;
@@ -544,7 +544,7 @@
     &__list {
         margin-top: 28px;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 20px;
         }
     }
@@ -557,11 +557,11 @@
         font-size: 1.8rem;
         font-weight: 500;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
@@ -578,7 +578,7 @@
         + .features__item {
             margin-top: 12px;
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 margin-top: 9px;
             }
         }
@@ -586,12 +586,12 @@
 
     &__group:first-of-type {
         .row {
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 flex-direction: column-reverse;
                 gap: 50px;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 gap: 30px;
             }
         }
@@ -600,15 +600,15 @@
     &__group:last-of-type {
         margin-top: 150px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 100px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 70px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 50px;
         }
 
@@ -616,11 +616,11 @@
             margin-left: 0;
             margin-right: 130px;
 
-            @include responsive-lg {
+            @include responsive.breakpoint-lg {
                 margin-right: 80px;
             }
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 margin-right: 0;
             }
         }
@@ -679,30 +679,30 @@
     margin-top: 150px;
     background: var(--black-color);
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         margin-top: 100px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         margin-top: 80px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 50px;
     }
 
     &__list {
         margin-top: -30px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: -50px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: -40px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: -20px;
         }
     }
@@ -717,20 +717,20 @@
     &__inner {
         padding: 100px 0;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             padding: 80px 0;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 40px 0 50px;
         }
     }
 
     &__info {
-        @include flex-column-center;
+        @include utilities.flex-column-center;
         margin-bottom: 70px;
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-bottom: 40px;
         }
     }
@@ -738,7 +738,7 @@
     &__label {
         color: var(--primary-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
@@ -747,15 +747,15 @@
     &__heading {
         color: var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 5px;
             font-size: 3rem;
             line-height: 1.23;
@@ -771,19 +771,19 @@
         text-align: center;
         color: var(--light-green-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 15px;
             width: 335px;
             font-size: 1.2rem;
@@ -795,15 +795,15 @@
         position: relative;
         margin-top: 30px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: 50px;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 40px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 20px;
         }
 
@@ -852,11 +852,11 @@
         font-weight: 700;
         line-height: 1.45;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 2rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 2.2rem;
         }
     }
@@ -878,11 +878,11 @@
     &__inner {
         padding: 100px 0;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             padding: 80px 0;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 50px 52px;
         }
     }
@@ -895,22 +895,22 @@
     }
 
     &__label {
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
     }
 
     &__heading {
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 3rem;
             line-height: 1.23;
         }
@@ -919,16 +919,16 @@
     &__media {
         margin-top: 70px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 40px;
         }
 
         .col {
-            @include responsive-lg {
+            @include responsive.breakpoint-lg {
                 margin-top: 30px;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 margin-top: 20px;
             }
         }
@@ -944,7 +944,7 @@
         padding: 85px 36px;
         background: var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             width: 100%;
             height: 100%;
         }
@@ -955,11 +955,11 @@
             .awards__thumb {
                 width: 136px;
 
-                @include responsive-lg {
+                @include responsive.breakpoint-lg {
                     width: 180px;
                 }
 
-                @include responsive-md {
+                @include responsive.breakpoint-md {
                     width: 200px;
                 }
             }
@@ -969,11 +969,11 @@
             .awards__thumb {
                 width: 198px;
 
-                @include responsive-lg {
+                @include responsive.breakpoint-lg {
                     width: 251px;
                 }
 
-                @include responsive-md {
+                @include responsive.breakpoint-md {
                     width: 270px;
                 }
             }
@@ -983,11 +983,11 @@
             .awards__thumb {
                 width: 143px;
 
-                @include responsive-lg {
+                @include responsive.breakpoint-lg {
                     width: 180px;
                 }
 
-                @include responsive-md {
+                @include responsive.breakpoint-md {
                     width: 200px;
                 }
             }
@@ -997,11 +997,11 @@
             .awards__thumb {
                 width: 100px;
 
-                @include responsive-lg {
+                @include responsive.breakpoint-lg {
                     width: 150px;
                 }
 
-                @include responsive-md {
+                @include responsive.breakpoint-md {
                     width: 200px;
                 }
             }
@@ -1013,15 +1013,15 @@
 .testimonial {
     margin-top: 150px;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         margin-top: 100px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         margin-top: 80px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 50px;
         padding: 0 20px;
     }
@@ -1035,7 +1035,7 @@
     &__label {
         color: var(--grey-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.78;
         }
@@ -1044,15 +1044,15 @@
     &__heading {
         max-width: 469px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 335px;
             font-size: 3rem;
             line-height: 1.23;
@@ -1063,7 +1063,7 @@
         display: flex;
         gap: 20px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             display: none;
         }
     }
@@ -1071,24 +1071,24 @@
     &__client {
         margin-top: 70px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 50px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 30px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 40px;
         }
 
         .col {
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 margin-top: 30px;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 margin-top: 20px;
             }
         }
@@ -1119,11 +1119,11 @@
 .faq {
     margin-top: 150px;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         margin-top: 100px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin-top: 50px;
         padding: 0 20px;
     }
@@ -1138,22 +1138,22 @@
         margin-top: 6px;
         color: var(--grey-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1rem;
             line-height: 1.7;
         }
     }
 
     &__heading {
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 2.4rem;
             line-height: 1.27;
         }
@@ -1169,11 +1169,11 @@
         font-size: 1.8rem;
         cursor: pointer;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1rem;
             line-height: 1.7;
         }
@@ -1184,10 +1184,10 @@
     }
 
     &__list {
-        @include flex-column-center;
+        @include utilities.flex-column-center;
         margin-top: 70px;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 53px;
         }
     }
@@ -1198,12 +1198,12 @@
     margin: 75px 0;
     padding: 75px 0;
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         margin: 50px 0;
         padding: 37px 0;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         margin: 25px 0;
         padding: 25px 20px;
     }
@@ -1211,22 +1211,22 @@
     &__label {
         color: var(--grey-color);
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
     }
 
     &__heading {
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 3.8rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 5px;
             font-size: 3rem;
             line-height: 1.23;
@@ -1238,13 +1238,13 @@
         justify-content: space-between;
         align-items: flex-end;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             gap: 0;
         }
     }
@@ -1256,7 +1256,7 @@
         line-height: 1.66;
         color: var(--grey-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
     }
@@ -1264,11 +1264,11 @@
     &__list {
         margin-top: 70px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 10px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 0;
         }
     }
@@ -1276,7 +1276,7 @@
     &__bottom {
         display: none;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -1285,7 +1285,7 @@
         .btn__blog {
             display: none;
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 margin-top: 40px;
                 display: block;
                 width: 158px;

@@ -1,5 +1,5 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 .footer {
     background: var(--black-color);
@@ -7,15 +7,15 @@
     &__inner {
         padding: 100px 0 28px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             padding: 80px 0 28px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             padding: 70px 0 28px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 30px 20px 30px;
         }
     }
@@ -27,16 +27,16 @@
         padding-bottom: 55px;
         line-height: 1.75;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             grid-template-columns: 1fr;
             gap: 50px;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             padding-bottom: 50px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             gap: 20px;
             padding-bottom: 20px;
         }
@@ -47,11 +47,11 @@
         font-family: var(--manrope-font);
         color: var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.8rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 2rem;
         }
     }
@@ -59,11 +59,11 @@
     &__list {
         margin-top: 24px;
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             margin-top: 22px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 24px;
         }
 
@@ -79,22 +79,22 @@
         > * {
             color: var(--light-green-color);
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 font-size: 1.8rem;
             }
 
-            @include responsive-sm {
+            @include responsive.breakpoint-sm {
                 font-size: 1.6rem;
             }
         }
     }
 
     &__item {
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
@@ -127,10 +127,10 @@
         width: 100%;
         max-width: 470px;
         aspect-ratio: 235 / 134;
-        height: auto;
+        height: 100%;
         border: 0;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             max-width: initial;
         }
     }
@@ -147,7 +147,7 @@
         align-items: flex-end;
         padding: 28px 0;
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 25px 0;
         }
     }
@@ -159,7 +159,7 @@
         gap: 12px;
         color: var(--white-color);
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             gap: 20px;
         }
     }
@@ -167,7 +167,7 @@
     &__copyright {
         color: var(--light-green-color);
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
     }
@@ -178,17 +178,17 @@
     }
 
     &__bottom {
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             padding: 30px 0;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             flex-direction: column;
             align-items: flex-start;
             gap: 22px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding-top: 20px;
         }
     }
@@ -200,10 +200,7 @@
     }
 
     &__group {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        @include utilities.flex-display-center;
         width: 36px;
         height: 36px;
         background: var(--footer-color);

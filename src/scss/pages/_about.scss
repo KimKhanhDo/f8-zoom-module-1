@@ -1,32 +1,32 @@
-@use '../base/utilities' as *;
-@use '../base/responsive' as *;
+@use '../base/utilities' as utilities;
+@use '../base/responsive' as responsive;
 
 .media {
     padding: 150px 0;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         padding: 140px 0;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         padding: 100px 0 150px;
     }
 
-    @include responsive-sm {
+    @include responsive.breakpoint-sm {
         padding: 80px 0 130px;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 50px 20px 80px;
     }
 
     &__bottom {
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 100px;
         }
 
         .row {
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 flex-direction: column-reverse;
             }
         }
@@ -39,7 +39,7 @@
         justify-content: center;
         align-items: flex-start;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             // margin-top: 100px;
         }
     }
@@ -47,34 +47,34 @@
     &__label {
         color: var(--grey-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
     }
 
     &__heading {
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 4.2rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 5px;
             font-size: 3rem;
             line-height: 1.23;
@@ -87,19 +87,19 @@
         line-height: 1.66;
         color: var(--grey-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 12px;
             font-size: 1.2rem;
             line-height: 1.75;
@@ -115,12 +115,12 @@
         max-width: 570px;
         aspect-ratio: 1 / 1;
 
-        @include responsive-xl {
+        @include responsive.breakpoint-xl {
             margin-left: 50px;
             width: 85%;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
@@ -129,11 +129,11 @@
             max-width: initial;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 80px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             width: 80%;
             margin-top: 46px;
         }
@@ -152,7 +152,7 @@
             right: -5.26%;
             top: -5.26%;
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 top: -4.5%;
                 right: 43%;
                 transform: translateX(100%);
@@ -166,7 +166,7 @@
             left: -5.26%;
             bottom: -5.26%;
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 left: 43%;
                 bottom: -4.5%;
                 transform: translateX(-100%);
@@ -182,7 +182,7 @@
         object-fit: cover;
         overflow: hidden;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             // width: 90%;
             // max-width: 100%;
             display: block;
@@ -194,26 +194,26 @@
     &__bottom {
         margin-top: 150px;
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             margin-top: 100px;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 80px;
         }
 
         .media__visual {
             margin-left: 30px;
 
-            @include responsive-xl {
+            @include responsive.breakpoint-xl {
                 // margin: 0 0 0 50px;
             }
 
-            @include responsive-md {
+            @include responsive.breakpoint-md {
                 margin: 100px auto 0 auto;
             }
 
-            @include responsive-xs {
+            @include responsive.breakpoint-xs {
                 margin: 46px auto 0 auto;
             }
         }
@@ -223,15 +223,15 @@
 .staff {
     padding: 150px 0;
 
-    @include responsive-lg {
+    @include responsive.breakpoint-lg {
         padding: 140px 0;
     }
 
-    @include responsive-md {
+    @include responsive.breakpoint-md {
         padding: 100px 0;
     }
 
-    @include responsive-xs {
+    @include responsive.breakpoint-xs {
         padding: 50px 0;
     }
 
@@ -239,36 +239,36 @@
         padding: 100px 0;
         background: var(--black-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             padding: 90px 0;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             padding: 40px 20px;
         }
     }
 
     &__top {
-        @include flex-column-center;
+        @include utilities.flex-column-center;
     }
 
     &__label {
         font-size: 1.8rem;
         color: var(--primary-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             font-size: 1.2rem;
             line-height: 1.75;
         }
@@ -277,19 +277,19 @@
     &__heading {
         color: var(--white-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 4rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             font-size: 4.2rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 4rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 4.8px;
             font-size: 3rem;
             line-height: 1.23;
@@ -304,20 +304,20 @@
         text-align: center;
         color: var(--light-green-color);
 
-        @include responsive-lg {
+        @include responsive.breakpoint-lg {
             font-size: 1.6rem;
         }
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             max-width: initial;
             font-size: 1.8rem;
         }
 
-        @include responsive-sm {
+        @include responsive.breakpoint-sm {
             font-size: 1.6rem;
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             margin-top: 13px;
             font-size: 1.2rem;
             line-height: 1.75;
@@ -327,19 +327,19 @@
     &__bottom {
         margin-top: 70px;
 
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             margin-top: 50px;
         }
     }
 
     &__list {
-        @include responsive-md {
+        @include responsive.breakpoint-md {
             .col:nth-of-type(n + 2) .staff__card {
                 margin-top: 30px;
             }
         }
 
-        @include responsive-xs {
+        @include responsive.breakpoint-xs {
             .col:nth-of-type(n + 2) .staff__card {
                 margin-top: 20px;
             }
