@@ -158,6 +158,7 @@
         align-items: flex-start;
         gap: 12px;
         color: var(--white-color);
+        cursor: pointer;
 
         @include responsive.breakpoint-md {
             gap: 20px;
